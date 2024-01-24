@@ -1,23 +1,23 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-int main()
+#include<math.h>
+int main() 
 {
-	int a = 1;
-	int b = 0;
-	while (a <= 100) {
-		if (a / 10 == 9 || a % 10 == 9) 
-		{
-			if (a / 10 == 9 && a % 10 == 9) {
-				b += 2;
-			}
-			else {
-				b += 1;
-			}
-		
-		}
-		a += 1;
+	int a = 101;
 
+while(a<=199)
+	{
+		int i = 0;
+		for (i = 2; i <= sqrt(a); i++) 
+		{
+			if (a % i == 0)
+				break;
+		}
+
+		if (i > sqrt(a))
+			printf("%d\t",a);
+		a+=2;
 	}
-	printf("%d", b);
+
 	return 0;
 }
