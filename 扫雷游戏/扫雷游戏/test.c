@@ -23,7 +23,7 @@ void menu2()
 	printf("****************\n");
 
 }
-void game()
+void game()//游戏具体流程及功能
 {
 
 	char mine[ROWS][COLS] = { 0 };//布置雷
@@ -32,20 +32,16 @@ void game()
 	InitBoard(mine, ROWS, COLS, '0');
 	InitBoard(show, ROWS, COLS, '*');//初始化
 
-
-	//DisplayBoard(mine, ROW, COL);
-	//DisplayBoard(show,ROW,COL);//展示面板
 	int modle = 0;
 	menu2();//选择游戏难度
 	scanf("%d", &modle);
-	SetMine(mine, ROW, COL,modle);
+	SetMine(mine, ROW, COL,modle);//根据选择难度设置雷个数
 
-	//DisplayBoard(mine, ROW, COL);
 	switch (modle)
 	{
 	  case 1:
 	{
-		  FindMine(mine, show, ROW, COL, EASYCOUNT);
+		  FindMine(mine, show, ROW, COL, EASYCOUNT);//排雷
 		  break; 
 	}
 	  case 2:
@@ -64,14 +60,13 @@ void game()
 }
 
 
-int main()
+int main()//游戏的基本框架
 {
-	srand((unsigned int)time(NULL));
+	srand((unsigned int)time(NULL));//用于生成随机坐标布置雷
 	int input = 0;
 	do 
 	{
-
-		menu1();
+		menu1();//游戏菜单界面
 		scanf("%d", &input);
 		switch(input)
 		{
