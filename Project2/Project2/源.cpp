@@ -1,8 +1,81 @@
-//#define _CRT_SECURE_NO_WARNINGS
-//#include<string.h>
-//#include<stdlib.h>
-//#include<stdio.h>
-//#include <time.h>
+#define _CRT_SECURE_NO_WARNINGS
+#include<string.h>
+#include<stdlib.h>
+#include<stdio.h>
+#include <time.h>
+#include<math.h>
+int main()
+{
+	char arr1[10] = { 0 };
+	int arr2[10] = { 0 };
+	scanf("%s", arr1);
+	scanf("%d", arr2);
+	for (int i = 0; i <= 9; i++)
+	{
+
+		printf("%s", arr1[i]);
+		printf("%c", arr1[i]);
+		printf("%d", arr2[i]);
+
+
+	}
+
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+//#include <stdio.h>
+//int main()
+//{
+//    int n = 0;
+//    int arr[50];
+//    int count = 0;
+//    int S = 0;
+//    float a = 0;
+//    while (scanf("%d", &n) != -1)
+//    {
+//        for (int i = 0; i <= n - 1; i++)
+//        {
+//            scanf("%d", &arr[i]);
+//
+//            if (arr[i] < 0)
+//            {
+//                count--;
+//            }
+//            if (arr[i] > 0)
+//            {
+//                S += arr[i];
+//            }
+//        }
+//        if (count == -n)
+//        {
+//            a = 0.0;
+//        }
+//        else
+//        {
+//            a = S / n;
+//        }
+//        printf("%d ", count);
+//        printf("%0.1f", a);
+//    }
+//    return 0;
+//}
+
+
+
+
+
 ////int bin_search(int arr[], int left, int right, int key)
 ////{
 ////	int i = 0;
@@ -131,3 +204,58 @@
 //
 //	return 0;
 //}
+//char x[5] = { '\xa'};
+//int* printNumbers(int n, int* returnSize)
+//{
+//    scanf("%d", &n);
+//    int arr[100000] = {};
+//    int i = 1;
+//    int a = pow(10, n) - 1;
+//    for (; i <= a; i++)
+//    {
+//        arr[i - 1] = i;
+//    }
+//
+//    return arr;
+//
+//}
+//int main() {
+//    int a, b, c;
+//    int count = 0;
+//    int arr[12] = { 31,28,31,30,31,30,31,31,30,31,30,31 };
+//    while (scanf("%d %d %d", &a, &b, &c) != EOF)
+//    {
+//        if (a % 4 == 0 && a % 100 != 0 || a % 400 == 0)
+//        {
+//            arr[1] = 29;
+//        }
+//        for (int i = 0; i <= b - 2; i++)
+//        {
+//            count += arr[i];
+//        }
+//        count += c;
+//
+//        printf("%d\n", count);
+//    }
+//    return 0;
+//int main() {
+//int a = 0;
+//while (scanf("%d", &a) != EOF)
+//{
+//    int c = a * (a - 1) + 1;
+//    int i = 1;
+//    for (; i < a; i++)
+//    {
+//        printf("%d+", c);
+//        c += 2;
+//    }
+//    for (; i == a;)
+//    {
+//        ++c;
+//        printf("%d\n", c);
+//    }
+//}
+//return 0;
+//}
+
+
