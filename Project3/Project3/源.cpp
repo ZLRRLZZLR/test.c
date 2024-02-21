@@ -4,14 +4,168 @@
 #include <stdio.h>
 #include <string.h>
 
-
 int main()
 {
-	char a = 'a', b;
-	printf("%c,", ++a);
-	printf("%c\n", b = a++);
-	return 0;
+    int n = 0,m = 0;
+    scanf("%d", &n);
+    m = n/2;
+
+    int i = 0;
+    int j = 1;
+            printf("偶数位：");
+            for (int i = 0; i < 32; i += 2)
+            {
+                printf("%d ", (n >> i) & 1);
+            }
+
+            printf("\n");
+            printf("奇数位：");
+            for (int j = 1; j < 32; j += 2)
+            {
+            printf("%d ", (n >> j) & 1);
+            }
+
+        printf("\n");
+    return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//int main() 
+//{
+//    int a = 5;
+//    int b = 3;
+//
+//    printf("a=%d b=%d\n", a, b);
+//    a = a ^ b;
+//    b = a ^ b;
+//    a = a ^ b;
+//
+//    printf("a=%d b=%d\n", a, b);
+//    return 0;
+//}
+
+
+
+//#include <stdio.h>
+//
+//int main()
+//{
+        //int k = 0;
+        //scanf("%d", &k);
+        //char arr[50];
+        //scanf("%s", arr);
+        //for (int i = 0; i < k; i++)
+        //{
+        //    printf("%c", arr[i]);
+        //    
+        //}
+
+
+
+
+    //int a = 0;
+    //scanf("%d", &a);
+    //printf("该数减去6的结果是%d", a - 6);
+    ///*int a = 0;
+    //scanf("%d", &a);
+    //printf("该数加上12的结果是%d", a+12);*/
+        //printf("喂！\n\n\n您好！\n再见。");
+   /* printf("天\n地\n人\n");*/
+    //printf("15减22的结果是%d", 15 - 22);
+
+    /*int a, b, c, n = 1;
+    while (scanf("%d", &n) != EOF)
+    {
+        if (n <= 2)
+        {
+            printf("1");
+        }
+        else
+        {
+            for (int i = 2; i < n; i++)
+            {
+                c = a + b;
+                a = b;
+                b = c;
+            }
+        }
+        printf("%d", c);
+//
+//    }*/
+//    return 0;
+//}
+
+
+//int main()
+//{
+//    char arr[50] = { "\n" };
+//    scanf("%s", &arr);
+//    int sz = strlen(arr);
+//    for (int i = 0; i < sz; i++)
+//    {
+//        if (arr[i] < "A" || arr[i] > "z")
+//        {
+//            arr[i] = "\0";
+//
+//        }
+//
+//
+//
+//    }
+//
+//    return 0;
+//}
+
+
+//int main()
+//{
+//    int n = 0;
+//    scanf("%d", &n);
+//    int count2 = 0;
+//    for (int i = 2; i <= n; i++)
+//    {
+//        int count1 = 0;
+//
+//        for (int j = 1; j < i; j++)
+//        {
+//            if (i % j == 0)
+//            {
+//                count1 += j;
+//            }
+//        }
+//        if (count1 == n)
+//        {
+//            count2 += 1;
+//        }
+//    }
+//    printf("%d", count2);
+//
+//    return 0;
+//}
+
+//
+//int main()
+//{
+//	char a = 'a', b;
+//	printf("%c,", ++a);
+//	printf("%c\n", b = a++);
+//	return 0;
+//}
 //int main()
 //{
 //    char arr[1000];
@@ -64,20 +218,6 @@ int main()
 //}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //#include <stdio.h>
 //#include <string.h>
 //int main()
@@ -116,15 +256,6 @@ int main()
 //}
 //    }
 //
-
-
-
-
-
-
-
-
-
 
 
 //#include <stdio.h>
