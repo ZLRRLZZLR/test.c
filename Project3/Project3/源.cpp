@@ -6,26 +6,25 @@
 
 int main()
 {
-    int n = 0,m = 0;
-    scanf("%d", &n);
-    m = n/2;
-
-    int i = 0;
-    int j = 1;
-            printf("偶数位：");
-            for (int i = 0; i < 32; i += 2)
+ 
+    int arr[] = { 1,2,3,4,5,1,2,3,4 };
+    for (int i = 0; i <= 8; i++)
+    {
+        int flge = 1;
+        for (int j = 0; j < 9; j++)
+        {
+            if (arr[i] == arr[j])
             {
-                printf("%d ", (n >> i) & 1);
-            }
+                flge++;
 
-            printf("\n");
-            printf("奇数位：");
-            for (int j = 1; j < 32; j += 2)
-            {
-            printf("%d ", (n >> j) & 1);
             }
-
-        printf("\n");
+        }
+        if (flge == 2)
+        {
+            printf("%d\n", arr[i]);
+            break;
+        }
+    }
     return 0;
 }
 
@@ -33,16 +32,30 @@ int main()
 
 
 
-
-
-
-
-
-
-
-
-
-
+//int main()
+//{
+//    int n = 0,m = 0;
+//    scanf("%d", &n);
+//    m = n/2;
+//
+//    int i = 0;
+//    int j = 1;
+//            printf("偶数位：");
+//            for (int i = 0; i < 32; i += 2)
+//            {
+//                printf("%d ", (n >> i) & 1);
+//            }
+//
+//            printf("\n");
+//            printf("奇数位：");
+//            for (int j = 1; j < 32; j += 2)
+//            {
+//            printf("%d ", (n >> j) & 1);
+//            }
+//
+//        printf("\n");
+//    return 0;
+//}
 
 
 //int main() 
