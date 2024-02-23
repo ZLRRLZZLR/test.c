@@ -3,34 +3,40 @@
 #include<math.h>
 #include <stdio.h>
 #include <string.h>
-
 int main()
 {
- 
-    int arr[] = { 1,2,3,4,5,1,2,3,4 };
-    for (int i = 0; i <= 8; i++)
-    {
-        int flge = 1;
-        for (int j = 0; j < 9; j++)
-        {
-            if (arr[i] == arr[j])
-            {
-                flge++;
+    int a = 10;
+    int* p = &a;
+    printf("%p\n", p);
+    printf("%p\n", p + 1);
 
-            }
-        }
-        if (flge == 2)
-        {
-            printf("%d\n", arr[i]);
-            break;
-        }
-    }
+
     return 0;
 }
 
-
-
-
+//int main()
+//{
+// 
+//    int arr[] = { 1,2,3,4,5,1,2,3,4 };
+//    for (int i = 0; i <= 8; i++)
+//    {
+//        int flge = 1;
+//        for (int j = 0; j < 9; j++)
+//        {
+//            if (arr[i] == arr[j])
+//            {
+//                flge++;
+//
+//            }
+//        }
+//        if (flge == 2)
+//        {
+//            printf("%d\n", arr[i]);
+//            break;
+//        }
+//    }
+//    return 0;
+//}
 
 //int main()
 //{
@@ -87,8 +93,6 @@ int main()
         //    printf("%c", arr[i]);
         //    
         //}
-
-
 
 
     //int a = 0;
@@ -398,12 +402,6 @@ int main()
 //	return 0;
 //}
 
-
-
-
-
-
-
 //int main()
 //{
 //
@@ -464,19 +462,6 @@ int main()
 //    }
 //}
 //
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //int main()
 //{
