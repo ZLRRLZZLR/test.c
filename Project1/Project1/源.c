@@ -2,39 +2,55 @@
 #include<stdio.h>
 #include<assert.h>
 
-void s(int* p)
-{
-	for(int i = 0;i < 10;i++)
-	{
-		for (int j = 0; j < 10; j++) 
-		{
-			int temp = 0;
-			if (*(p+i) % 2 != 0)
-			{
-				temp = *(p + j);
-				*(p + j) = *(p + i);
-				*(p + i) = temp;
-			}
-			if(*(p + i) % 2 == 0)
-			{
-				break;
-			}
-		}
-	}
-	for(int i = 0;i < 10;i++)
-	{
-		printf("%d", *(p+i));
-	}
-}
-
 int main()
 {
 
-	int arr[10] = { 0 };
-	scanf("%d", &arr);
-	s(arr);
+
+
+
+
+
+
 	return 0;
 }
+
+
+//void s(int* p)
+//{
+//	for(int i = 0;i < 10;i++)
+//	{
+//		for (int j = 0; j < 10; j++) 
+//		{
+//			int temp = 0;
+//			if (*(p+i) % 2 != 0)
+//			{
+//				temp = *(p + j);
+//				*(p + j) = *(p + i);
+//				*(p + i) = temp;
+//			}
+//			if(*(p + i) % 2 == 0)
+//			{
+//				break;
+//			}
+//		}
+//	}
+//	for(int i = 0;i < 10;i++)
+//	{
+//		printf("%d ", *(p+i));
+//	}
+//}
+//
+//int main()
+//{
+//
+//	int arr[10] = { 0 };
+//	for (int i = 0; i < 10; i++)
+//	{
+//		scanf("%d", &arr[i]);
+//	}
+//	s(arr);
+//	return 0;
+//}
 
 
 //void bubble_sort(int* arr,int sz)
