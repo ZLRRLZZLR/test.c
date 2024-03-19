@@ -7,13 +7,65 @@
 #include<math.h>
 #include<errno.h>
 
+#include <stdio.h>
+
 int main()
 {
-	int b = 0x11223344;
+    int n = 9;
+    float* pFloat = (float*)&n;//int*
+    printf("n的值为：%d\n", n);
+    printf("*pFloat的值为：%f\n", *pFloat);
 
-	return 0;
+    *pFloat = 9.0;
+    printf("num的值为：%d\n", n);
+    printf("*pFloat的值为：%f\n", *pFloat);
+    return 0;
 }
 
+
+//int main()
+//{
+//	int arr1[] = { 1,2,3,4,5,6,7 };
+//	int arr2[] = { 1,2,3,4,8,8,8 };
+//	int ret = memcmp(arr1, arr2, 20);
+//	printf("%d\n", ret);
+//
+//	return 0;
+//}
+
+
+
+//int main()
+//{
+//	char arr[] = "hello world";
+//	memset(arr+2, 'y', 7);
+//	printf("%s\n", arr);
+//
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	int arr[5] = { 1,2,3,4,5 };
+//	memset(arr, 0, 10);//以字节为单位设置的
+//	int i = 0;
+//	for (i = 0; i < 5; i++)
+//	{
+//		printf("%d ", arr[i]);
+//	}
+//
+//	return 0;
+//}
+
+//
+//int main()
+//{
+//	int b = 0x11223344;
+//
+//	return 0;
+//}
+//
 
 
 //int main()
@@ -208,7 +260,7 @@ int main()
 //	return 0;
 //}
 //
-//void* my_menmove(void* dest, const void* src, size_t num)
+//void* my_memmove(void* dest, const void* src, size_t num)
 //{
 //	void* ret = dest;
 //	assert(dest && src);
@@ -237,7 +289,7 @@ int main()
 //	int arr1[10] = { 1,2,3,4,5,6,7,8,9,10 };
 //	int arr2[10] = { 0 };
 //
-//	my_menmove(arr1 + 2, arr1, 20);
+//	my_memmove(arr1 + 2, arr1, 20);
 //	for (int i = 0; i < 10; i++)
 //	{
 //		printf("%d\n", arr1[i]);
@@ -264,7 +316,7 @@ int main()
 //{
 //	int arr1[10] = { 1,2,3,4,5,6,7,8,9,10 };
 //	int arr2[10] = { 0 };
-//	my_mencpy(arr2, arr1, 20);
+//	my_mencpy(arr2+2, arr2, 20);
 //	for (int i = 0; i < 10; i++)
 //	{
 //		printf("%d\n", arr2[i]);
