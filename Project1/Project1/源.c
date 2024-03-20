@@ -1,15 +1,42 @@
 #define _CRT_SECURE_NO_WARNINGS
+#define EPSILON  0.0000001
 #include<stdio.h>
-#include<assert.h>
-#include<stdlib.h>
-#include<string.h>
-#include<ctype.h>
+#include<float.h>
 #include<math.h>
-#include<errno.h>
+
 //ÇàÍÜÌøÌ¨½×£¬ººÅµËþ,KMPËã·¨
 
 
 
+
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<float.h>
+#include<math.h>
+int main()
+{
+
+
+	float a = 0.45541;
+	double x = 1.0;
+	double y = 0.1;
+	//printf("%.50f\n", a);
+	//printf("%.50f\n",x);
+	//printf("%.50f\n", x);
+	//printf("%.50f\n", x - 0.9);
+	//printf("%.50f\n", y);
+	if(fabs((x - 0.9) - y) < DBL_EPSILON)
+	{
+		puts("Yes");
+	}
+	else
+	{
+		puts("No");
+	}
+
+	return 0;
+}
 
 
 #if 0;
