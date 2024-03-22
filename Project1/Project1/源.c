@@ -1,14 +1,29 @@
 #define _CRT_SECURE_NO_WARNINGS
-#define EPSILON  0.0000001
 #include<stdio.h>
-#include<float.h>
 #include<math.h>
 
+
+
+int main(void)
+{
+	int money, year;
+	double interest, rate;
+	scanf("%d%d%lf", &money, &year, &rate);
+	interest = money * pow(1 + rate, year) - money;
+	printf("interest =%.2f\n", interest);
+}
+
+
 //«‡Õ‹Ã¯Ã®Ω◊£¨∫∫≈µÀ˛,KMPÀ„∑®
+//i/*nt main()
+//{
+//
+//
+//	return 0;
+//}*/
 
 
-
-
+#if 0;
 
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
@@ -37,9 +52,6 @@ int main()
 
 	return 0;
 }
-
-
-#if 0;
 
 
 //
@@ -183,6 +195,10 @@ int main()
 	printf("%d %d\n", a, b);
 	return 0;
 }
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<math.h>
+
 int main()
 {
 	float a, b, c, s, area;
@@ -194,26 +210,17 @@ int main()
 	return 0;
 }
 
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
 int main()
 {
-	int a = 0, b = 0, c = 0, d = 0, e = 0;
+	int a = 0;
 	scanf("%d", &a);
-	b = a % 10;
-	a = a / 10;
-	c = a % 10;
-	d = a / 10;
-	e = b * 100 + c * 10 + d;
-	printf("%d\n", e);
+	a = a % 10 * 100 + a / 10 %10 *10 + a / 100 
+	printf("%d\n", a);
 	printf("23200116320÷‹¡ı»Ÿ\n");
 	return 0;
 }
-
-
-
-
-//
-
-
 
 
 // char* strcat1(char*dest,const char*source)
