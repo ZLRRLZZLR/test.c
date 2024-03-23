@@ -1,31 +1,170 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 #include<math.h>
+#include<stdlib.h>
+
+//青蛙跳台阶，汉诺塔,KMP算法
+//
+//int main()
+//{
+//	int*p = (int*)malloc(20);
+//	if(p == NULL)
+//	{
+//		perror("malloc");
+//		return 1;
+//	}
+//	int i = 0;
+//	for(;i < 5;i++)
+//	{
+//		p[i] = i + 1;
+//	}
+//	free(p);
+//	p = NULL;
+//	return 0;
+//}
+//int main()
+//{
+//	int* p = (int*)malloc(20);
+//	if (p == NULL)
+//	{
+//		perror("malloc(）");
+//		return 1;
+//	}
+//	int i = 0;
+//	for(;i < 5;i++)
+//	{
+//		*p = i + 1;
+//		p++;
+//	}
+//	free(p);
+//	p = NULL;
+//	return 0;
+//}
+//
+//int main()
+//{
+//	int* p = (int*)malloc(20);
+//	if(p == NULL)
+//	{
+//		perror("malloc");
+//		return 1;
+//	}
+//	free(p);
+//	p = NULL;
+//	return 0;
+//}
+//int main()
+//{
+//	int* p = (int*)calloc(5, sizeof(int));
+//	if (p == NULL)
+//	{
+//		perror("calloc");
+//		return 1;
+//	}
+//	int i = 0;
+//	for(int i = 0;i < 5;i++)
+//	{
+//		p[i] = i + 1;
+//	}
+//	free(p);
+//	p = NULL;
+//	return 0;
+//}
+//int main()
+//{
+//	int* p = (int*)calloc(5, 4);
+//	if(p == NULL)
+//	{
+//		perror("calloc");
+//		return 1;
+//	}
+//	int i = 0;
+//	for(;i < 5;i++)
+//	{
+//		printf("%d", p[i]);
+//	}
+//	free(p);
+//	p = NULL;
+//	return 0;
+//}
+//int main()
+//{
+//	int*p = (int*)malloc(20);
+//	if(p == NULL)
+//	{
+//		perror("malloc");
+//	}
+//	int* ptr = (int*)realloc(p, 4000);
+//	if(ptr != NULL)
+//	{
+//		p = ptr;
+//		ptr = NULL;
+//		int i = 0;
+//		for (i = 5; i < 10; i++)
+//		{
+//			p[i] = i + 1;
+//		}
+//		free(p);
+//		p = NULL;
+//	}
+//	else
+//	{
+//		perror("realloc");
+//		free(p);
+//		p = NULL;
+//	}
+//	return 0;
+//}
+//int main()
+//{
+//
+//	int*p = (int*)realloc(NULL, 20);
+//	if(p == NULL)
+//	{
+//		perror("realloc");
+//	}
+//	free(p);
+//	p = NULL;
+//	return 0;
+//}
 
 int main()
 {
-	int N = 0;
-	while (scanf("%d", &N) != EOF)
+	int*p = (int*)malloc(3 * 5 * sizeof(int));
+	int
+	for (int i = 0; i < 3; i++)
 	{
-		int arr[50];
-		int a = 0;
-		for (int i = 0; i < N; i++)
+		for (int j = 0; j < 5; j++)
 		{
-			scanf("%d", arr[i]);
-		}
-		scanf("%d", &a);
-		for (int i = 0; i < N; i++)
-		{
-			if (arr[i] != a)
-			{
-				printf("%d", arr[i]);
-			}
+			p[i][j] = j + 1;
 		}
 	}
 	return 0;
 }
+#if 0;
 
-
+//int main()
+//{
+//	int N = 0;
+//	while (scanf("%d", &N) != EOF)
+//	{
+//		int arr[50];
+//		int a = 0;
+//		for (int i = 0; i < N; i++)
+//		{
+//			scanf("%d", &arr[i]);
+//		}
+//		scanf("%d", &a);
+//		for (int i = 0; i < N; i++)
+//		{
+//			if (arr[i] != a)
+//			{
+//				printf("%d", arr[i]);
+//			}
+//		}
+//	}
+//	return 0;
+//}
 
 //#include <stdio.h>
 //struct str {
@@ -101,7 +240,7 @@ int main()
 //	printf("interest =%.2f\n", interest);
 //}
 
-//青蛙跳台阶，汉诺塔,KMP算法
+
 //i/*nt main()
 //{
 //
@@ -109,7 +248,6 @@ int main()
 //	return 0;
 //}*/
 
-#if 0;
 
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
