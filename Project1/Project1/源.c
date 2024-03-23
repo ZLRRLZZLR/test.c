@@ -2,17 +2,104 @@
 #include<stdio.h>
 #include<math.h>
 
-
-
-int main(void)
+int main()
 {
-	int money, year;
-	double interest, rate;
-	scanf("%d%d%lf", &money, &year, &rate);
-	interest = money * pow(1 + rate, year) - money;
-	printf("interest =%.2f\n", interest);
+	int N = 0;
+	while (scanf("%d", &N) != EOF)
+	{
+		int arr[50];
+		int a = 0;
+		for (int i = 0; i < N; i++)
+		{
+			scanf("%d", arr[i]);
+		}
+		scanf("%d", &a);
+		for (int i = 0; i < N; i++)
+		{
+			if (arr[i] != a)
+			{
+				printf("%d", arr[i]);
+			}
+		}
+	}
+	return 0;
 }
 
+
+
+//#include <stdio.h>
+//struct str {
+//	int len;
+//	char s[0];
+//};
+//struct foo {
+//	struct str* a;
+//};
+//int main(int argc, char** argv) {
+//	struct foo f = { 0 };
+//	if (f.a->s) {
+//		printf(f.a->s);
+//	}
+//	return 0;
+//}
+
+
+//int main()
+//{
+//
+//	for (int i = 10000; i <= 99999 && i >= 10000; i++)
+//	{
+//		int b = 0;
+//		int c = 0;
+//		for (int j = 1; j <= 4; j++)
+//		{
+//			b = (i / (int)pow(10, (5 - j))) * (i % (int)pow(10, (5 - j)));
+//			c += b;
+//		}
+//		if (i == c)
+//		{
+//			printf("%d ", i);
+//		}
+//	}
+//	return 0;
+//}
+
+
+
+//int cherk()
+//{
+//	union S
+//	{
+//		char a;
+//		int b;
+//	}u;
+//	u.b = 1;
+//	return u.a;
+//}
+//
+//
+//int main()
+//{
+//	int n = cherk();
+//	if (n)
+//	{
+//		puts("Ğ¡¶Ë");
+//	}
+//	else
+//	{
+//		puts("´ó¶Ë");
+//	}
+//	return 0;
+//}
+
+//int main(void)
+//{
+//	int money, year;
+//	double interest, rate;
+//	scanf("%d%d%lf", &money, &year, &rate);
+//	interest = money * pow(1 + rate, year) - money;
+//	printf("interest =%.2f\n", interest);
+//}
 
 //ÇàÍÜÌøÌ¨½×£¬ººÅµËş,KMPËã·¨
 //i/*nt main()
@@ -21,7 +108,6 @@ int main(void)
 //
 //	return 0;
 //}*/
-
 
 #if 0;
 
