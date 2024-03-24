@@ -2,37 +2,208 @@
 #include<stdio.h>
 #include<math.h>
 #include<stdlib.h>
-
+#include<assert.h>
 //青蛙跳台阶，汉诺塔,KMP算法
+
+struct Stu
+{
+	char name[20];
+	char sex[20];
+	int age;
+	char id[20];
+
+}s1,s3;
+
+
 int main()
 {
-	FILE* pf1 = fopen("data.txt", "r");
-	if(pf1 == NULL)
-	{
-		perror("fopen");
-		return 1;
-	}
-	FILE* pf2 = fopen("data_copy.txt", "w");
-	if (pf2 == NULL)
-	{
-		perror("fopen");
-		return 1;
-	}
-	char ch = 0;
-	while ((ch = fgetc(pf1)) != EOF)
-	{
-		fputc(ch, pf2);
+	struct Stu s2;
 
-	}
-	fclose(pf1);
-	fclose(pf2);
-	pf1 = NULL;
-	pf2 = NULL;
 	return 0;
 }
 
 
-#if 0;
+
+
+//int main()
+//{
+//
+//	float a = 0;
+//	printf("%2f %2f %.2f", 123.1, 123.123, 123.123);
+//	return 0;
+//
+//}
+
+
+
+#if 0
+
+int main()
+{
+	int** arr = (int**)malloc(3 * sizeof(int*));
+	if (arr == NULL)
+	{
+		perror("malloc");
+		return 1;
+	}
+	for (int i = 0; i < 3; i++)
+	{
+		arr[i] = (int)malloc(5 * sizeof(int));
+		if (arr[i] == NULL)
+		{
+			perror("malloc");
+			return 1;
+		}
+	}
+	for (int i = 0; i < 3; i++)
+	{
+		for (int j = 0; j < 5; j++)
+		{
+			arr[i][j] = j;
+		}
+	}
+	for (int i = 0; i < 3; i++)
+	{
+		free(arr[i]);
+	}
+	free(arr);
+	arr = NULL;
+	return 0;
+}
+
+
+enum State
+{
+	VAILD,
+	INVAILD
+
+}state = INVAILD;
+
+
+int myatoi(const char* str)
+{
+	assert(str != NULL);
+	if (*str != '\0');
+	while(isspace(*str))
+	{
+		str++;
+	}
+	int flge = 1;
+	if(*str == '+')
+	{
+		flge = 1;
+		str++;
+	}
+	else if(*str == '-')
+	{
+		flge = -1;
+		str++;
+	}
+	long long ret = 0;
+	while(*str != '\0')
+	{
+		if (isdigit(*str))
+		{
+			ret = ret * 10 + (*str - '0') * flge;
+			if (ret > INT_MAX)
+			{
+				return INT_MAX;
+			}
+			if (ret < INT_MIN)
+			{
+				return INT_MIN;
+			}
+		}
+		else
+		{
+			return (int)ret;
+		}
+		str++;
+	}
+	if(*str == '\0')
+	{
+		state = INVAILD;
+	}
+	return (int)ret;
+}
+
+int main()
+{
+	char arr[20] = { 0 };
+	scanf("%s",&arr);
+	int ret = myatoi(arr);
+	if(state)
+	{
+		puts("非法"); 
+	}
+	else
+	{
+		puts("合法");
+	}
+	return 0;
+}
+
+int main()
+{
+	int a = 0;
+	int b = 0;
+	int c = 0;
+
+	puts("请输入三个整数");
+	printf("整数1：");
+	scanf("%d", &a);
+	printf("整数2：");
+	scanf("%d", &b);
+	printf("整数3：");
+	scanf("%d", &c);
+
+	printf("它们的和是%d", a + b + c);
+	return 0;
+}
+
+
+int main()
+{
+	int a = 0;
+	int b = 0;
+	puts("请输入两个整数");
+	printf("整数1：");
+	scanf("%d",&a);
+	printf("整数2：");
+	scanf("%d", &b);
+	printf("它们的乘积是%d", a * b);
+	return 0;
+}
+
+
+//int main()
+//{
+//	FILE* pf1 = fopen("data.txt", "r");
+//	if(pf1 == NULL)
+//	{
+//		perror("fopen");
+//		return 1;
+//	}
+//	FILE* pf2 = fopen("data_copy.txt", "w");
+//	if (pf2 == NULL)
+//	{
+//		perror("fopen");
+//		return 1;
+//	}
+//	char ch = 0;
+//	while ((ch = fgetc(pf1)) != EOF)
+//	{
+//		fputc(ch, pf2);
+//
+//	}
+//	fclose(pf1);
+//	fclose(pf2);
+//	pf1 = NULL;
+//	pf2 = NULL;
+//	return 0;
+//}
+
+
 
 //	return 0;
 //}
@@ -1111,4 +1282,4 @@ int main()
 }
 
 
-#endif;
+#endif
