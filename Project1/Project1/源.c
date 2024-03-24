@@ -4,7 +4,175 @@
 #include<stdlib.h>
 
 //ÇàÍÜÌøÌ¨½×£¬ººÅµËþ,KMPËã·¨
+int main()
+{
+	FILE* pf1 = fopen("data.txt", "r");
+	if(pf1 == NULL)
+	{
+		perror("fopen");
+		return 1;
+	}
+	FILE* pf2 = fopen("data_copy.txt", "w");
+	if (pf2 == NULL)
+	{
+		perror("fopen");
+		return 1;
+	}
+	char ch = 0;
+	while ((ch = fgetc(pf1)) != EOF)
+	{
+		fputc(ch, pf2);
+
+	}
+	fclose(pf1);
+	fclose(pf2);
+	pf1 = NULL;
+	pf2 = NULL;
+	return 0;
+}
+
+
+#if 0;
+
+//	return 0;
+//}
+//int main()
+//{
+//	FILE* pf = fopen("text.txt", "w");
+//	if(pf == NULL)
+//	{
+//		perror("fopen");
+//		return 1;
+//	}
+//	fclose(pf);
+//	pf = NULL;
+//	return 0;
+//}
+//int main()
+//{
+//	FILE* pf = fopen("text.txt","w");
+//	if(pf == NULL)
+//	{
+//		perror("fopen");
+//	}
+//	fputc('a', pf);
+//	fputc('b', pf);
+//	fputc('c', pf);
+//	char ch = 0;
+//	for(ch = 'a';ch <= 'z';ch++)
+//	{
+//		fputc(ch, pf);
+//	}
+//	fclose(pf);
+//	pf = NULL;
 //
+//	return 0;
+//}
+//
+//int main()
+//{
+//	FILE* pf = fopen("text.txt", "r");
+//	if(pf == NULL)
+//	{
+//		perror("fopen");
+//		return 1;
+//	}
+//	int ch = fgetc(pf);
+//	printf("%c\n", ch);
+//
+//	ch = fgetc(pf);
+//	printf("%c\n", ch);
+//
+//	ch = fgetc(pf);
+//	printf("%c\n", ch);
+//
+//	fclose(pf);
+//	pf = NULL;
+//
+//	return 0;
+//}
+//
+//int main()
+//{
+//	FILE* pf = fopen("text.txt", "r");
+//	if (pf == NULL)
+//	{
+//		perror("fopen");
+//		return 1;
+//	}
+//	int ch = 0;
+//	while((ch = fgetc(pf)) != EOF)
+//	{
+//		printf("%c", ch);
+//	}
+//
+//	fclose(pf);
+//	pf = NULL;
+//
+//	return 0;
+//}
+//
+//int main()
+//{
+//	FILE* pf = fopen("text.txt", "w");
+//	if(pf == NULL)
+//	{
+//		perror("fopen");
+//		return 1;
+//	}
+//	fputs("hello world\n", pf);
+//	fputs("hello bite", pf);
+//
+//	fclose(pf);
+//	pf = NULL;
+//	return 0;
+//}
+//
+//int main()
+//{
+//	FILE* pf = fopen("text.txt", "r");
+//	if(pf == NULL)
+//	{
+//		perror("fopen");
+//		return 1;
+//	}
+//	char arr[20] = { 0 };
+//	while(fgets(arr,20 ,pf) != NULL)
+//	{
+//		printf("%s", arr);
+//	}
+//	fclose(pf);
+//	pf = NULL;
+//	return 0;
+//}
+// 
+//int main()
+//{
+//	int(*p)[3][5] = (int*)malloc(3 * 5 * sizeof(int));
+//	if (p == NULL)
+//	{
+//		perror("malloc");
+//		return 1;
+//	}
+//	for (int i = 0; i < 3; i++)
+//	{
+//		for (int j = 0; j < 5; j++)
+//		{
+//			(*p)[i][j] = j + 1;
+//		}
+//	}
+//	for (int i = 0; i < 3; i++)
+//	{
+//		for (int j = 0; j < 5; j++)
+//		{
+//			printf("%d ", (*p)[i][j]);
+//		}
+//	}
+//
+//	free(p);
+//	p = NULL;
+//	return 0;
+//}
 //int main()
 //{
 //	int*p = (int*)malloc(20);
@@ -128,21 +296,6 @@
 //	return 0;
 //}
 
-int main()
-{
-	int*p = (int*)malloc(3 * 5 * sizeof(int));
-	int
-	for (int i = 0; i < 3; i++)
-	{
-		for (int j = 0; j < 5; j++)
-		{
-			p[i][j] = j + 1;
-		}
-	}
-	return 0;
-}
-#if 0;
-
 //int main()
 //{
 //	int N = 0;
@@ -249,33 +402,33 @@ int main()
 //}*/
 
 
-#define _CRT_SECURE_NO_WARNINGS
-#include<stdio.h>
-#include<float.h>
-#include<math.h>
-int main()
-{
-
-
-	float a = 0.45541;
-	double x = 1.0;
-	double y = 0.1;
-	//printf("%.50f\n", a);
-	//printf("%.50f\n",x);
-	//printf("%.50f\n", x);
-	//printf("%.50f\n", x - 0.9);
-	//printf("%.50f\n", y);
-	if(fabs((x - 0.9) - y) < DBL_EPSILON)
-	{
-		puts("Yes");
-	}
-	else
-	{
-		puts("No");
-	}
-
-	return 0;
-}
+//#define _CRT_SECURE_NO_WARNINGS
+//#include<stdio.h>
+//#include<float.h>
+//#include<math.h>
+//int main()
+//{
+//
+//
+//	float a = 0.45541;
+//	double x = 1.0;
+//	double y = 0.1;
+//	//printf("%.50f\n", a);
+//	//printf("%.50f\n",x);
+//	//printf("%.50f\n", x);
+//	//printf("%.50f\n", x - 0.9);
+//	//printf("%.50f\n", y);
+//	if(fabs((x - 0.9) - y) < DBL_EPSILON)
+//	{
+//		puts("Yes");
+//	}
+//	else
+//	{
+//		puts("No");
+//	}
+//
+//	return 0;
+//}
 
 
 //
