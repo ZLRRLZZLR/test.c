@@ -2,28 +2,103 @@
 #include<stdio.h>
 #include<math.h>
 #include<stdlib.h>
-#include<assert.h>
+#include<assert.h>1
 //青蛙跳台阶，汉诺塔,KMP算法
-
-struct Stu
+struct S1
 {
-	char name[20];
-	char sex[20];
-	int age;
-	char id[20];
-
-}s1,s3;
-
-
+	char c1;
+	int i;
+	char c2;
+}s1;
+struct S2
+{
+	char c1;
+	char c2;
+	int i;
+}s2;
 int main()
 {
-	struct Stu s2;
+	printf("%d\n", sizeof(s1));
+	printf("%d\n", sizeof(s2));
 
 	return 0;
 }
 
+//struct Node
+//{
+//	int age;
+//	char sex[20];
+//
+//}n1;
+//#pragma pack(1)//设置默认对?数为1
+//struct Stu
+//{
+//	char name;//大小为1，默认1，对齐数取1
+//	int age;//大小为4，默认1，对齐数取1
+//	char sex[20];//大小为1，默认1，对齐数取1
+//	char id[20];//大小为1，默认1，对齐数取1
+//
+//};
+//#pragma pack()//取消设置的对?数，还原为默认
+//
+//
+//
+//
+//int main()
+//{
+//	struct Stu s2 = { .name = "l" , .age = 19,.sex = "w",.id = "1" };
+//	printf("%d", sizeof(s2));
+//	return 0;
+//}
+
+#if 0
+//int main()
+//{
+//	int a = 0;
+//	scanf("%d", &a);
+//	switch (a)
+//	{
+//	case 1:
+//		switch (a)
+//	{
+//	case 0:
+//		printf("1\n"); 
+//		break;
+//	case 1:
+//		printf("2\n"); 
+//		break;
+//	
+//	}
+//	case 0:
+//		printf("3\n");
+//		break;
+//
+//	}
+//	return 0;
+//}
 
 
+//int main()
+//{
+//	int a = 0;
+//	scanf("%d",&a);
+//	if (1 == a) 
+//	printf("1");
+//	else if()
+//	{
+//		;
+//	}
+//	else
+//	    if
+//
+//	else
+//	{
+//		if
+//	}
+//	if (2 == a);
+//
+//	return 0;
+//}
 
 //int main()
 //{
@@ -33,10 +108,6 @@ int main()
 //	return 0;
 //
 //}
-
-
-
-#if 0
 
 int main()
 {
