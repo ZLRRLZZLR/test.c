@@ -2,37 +2,118 @@
 #include<stdio.h>
 #include<math.h>
 #include<stdlib.h>
-#include<assert.h>1
+#include<assert.h>
 //青蛙跳台阶，汉诺塔,KMP算法
-#define _CRT_SECURE_NO_WARNINGS
-#include<stdio.h>
-
-int cherk()
-
-{
-	union S
-	{
-		char a;
-		int b;
-	}u;
-	u.b = 1;
-	return u.a;
-}
-
-
 int main()
 {
-	int n = cherk();
-	if (n)
+	int year = 0,month = 0,FEB = 0;
+	scanf("%d%d",&year,&month);
+	if (!(year % 4) && year % 100 || !(year % 400))
 	{
-		puts("小端");
+		FEB = 29;
 	}
 	else
 	{
-		puts("大端");
+		FEB = 28;
 	}
+	switch(month)
+	{
+	case 1:
+	case 3:
+	case 5:
+	case 7:
+	case 8:
+	case 10:
+	case 12:
+		printf("%d", 31);
+		break;
+	case 4:
+	case 6:
+	case 9:
+	case 11:
+		printf("%d", 30);
+		break;
+	case 2:
+		printf("%d", FEB);
+		break;
+
+	}
+
 	return 0;
 }
+
+
+
+
+
+
+//#include<math.h>
+//#include <stdio.h>
+//#include<stdio.h> 
+//int main()
+//{
+//	char ch;
+//	scanf("%c", &ch);
+//	ch = ch + 32;
+//	putchar(ch);
+//	return 0;
+//}
+
+
+
+//int main()
+//{
+//	int a = 0, b;
+//	scanf("%d", &a);
+//	if (a > 10)
+//	{
+//		b = a * 3;
+//		printf("%d\n", b);
+//	}
+//	else if (a >= 3 && a <= 10)
+//	{
+//		b = a * 2;
+//		printf("%d\n", b);
+//	}
+//	else
+//	{
+//		b = 10;
+//		printf("%d\n", b);
+//	}
+//	printf("23200116320周刘荣");
+//	return 0;
+//}
+#if 0
+
+//#define _CRT_SECURE_NO_WARNINGS
+//#include<stdio.h>
+
+//int cherk()
+//
+//{
+//	union S
+//	{
+//		char a;
+//		int b;
+//	}u;
+//	u.b = 1;
+//	return u.a;
+//}
+//
+//
+//int main()
+//{
+//	int n = cherk();
+//	if (n)
+//	{
+//		puts("小端");
+//	}
+//	else
+//	{
+//		puts("大端");
+//	}
+//	return 0;
+//}
 //struct S1
 //{
 //	char c1;
@@ -80,7 +161,6 @@ int main()
 //	return 0;
 //}
 
-#if 0
 //int main()
 //{
 //	int a = 0;
