@@ -4,25 +4,54 @@
 #include<stdlib.h>
 #include<assert.h>1
 //青蛙跳台阶，汉诺塔,KMP算法
-struct S1
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+int cherk()
+
 {
-	char c1;
-	int i;
-	char c2;
-}s1;
-struct S2
-{
-	char c1;
-	char c2;
-	int i;
-}s2;
+	union S
+	{
+		char a;
+		int b;
+	}u;
+	u.b = 1;
+	return u.a;
+}
+
+
 int main()
 {
-	printf("%d\n", sizeof(s1));
-	printf("%d\n", sizeof(s2));
-
+	int n = cherk();
+	if (n)
+	{
+		puts("小端");
+	}
+	else
+	{
+		puts("大端");
+	}
 	return 0;
 }
+//struct S1
+//{
+//	char c1;
+//	int i;
+//	char c2;
+//}s1;
+//struct S2
+//{
+//	char c1;
+//	char c2;
+//	int i;
+//}s2;
+//int main()
+//{
+//	printf("%d\n", sizeof(s1));
+//	printf("%d\n", sizeof(s2));
+//
+//	return 0;
+//}
 
 //struct Node
 //{
