@@ -4,48 +4,118 @@
 #include<stdlib.h>
 #include<assert.h>
 //青蛙跳台阶，汉诺塔,KMP算法
+
+
+
+
+#if 0
+#define SWAP(a) ((a)<<1)
 int main()
 {
-	int year = 0,month = 0,FEB = 0;
-	scanf("%d%d",&year,&month);
-	if (!(year % 4) && year % 100 || !(year % 400))
-	{
-		FEB = 29;
-	}
-	else
-	{
-		FEB = 28;
-	}
-	switch(month)
-	{
-	case 1:
-	case 3:
-	case 5:
-	case 7:
-	case 8:
-	case 10:
-	case 12:
-		printf("%d", 31);
-		break;
-	case 4:
-	case 6:
-	case 9:
-	case 11:
-		printf("%d", 30);
-		break;
-	case 2:
-		printf("%d", FEB);
-		break;
-
-	}
-
+	printf("%d",SWAP(2863311530));
 	return 0;
 }
 
+//#define offsetof(a,b) (&(b) - (&a)) 
+//
+//struct S
+//{
+//	char a;
+//	int b;
+//	char c;
+//
+//}s;
+//int main()
+//{
+//	int ret = offsetof(s.a, s.c);//接收结构体的首地址、要比较的成员变量，并返回偏移量
+//	printf("%d", ret);
+//	return 0;
+//}
+
+int main()
+{
+
+	printf("%d\n", 5/2);
+    printf("%f\n", 5 / 2);
+	printf("%d\n", 5.0 / 2);
+	printf("%f\n", 5.0 / 2);
+	return 0;
+}
+//int main()
+//{
+//	double a = 0;//输入57.3
+//	scanf("%lf", &a);
+//	printf("%lf", a);
+//	return 0;
+//
+//}
+//int main()
+//{
+//	float a = 0;//输入57.3
+//	scanf("%f", &a);
+//	printf("%f", a);
+//	return 0;
+//
+//}
+
+//int main()
+//{
+//	int x = 0, y = 0;
+//	scanf("%d%d", &x, &y);
+//	printf("整数x:%d\n",x);
+//	printf("整数y:%d\n", y);
+//	printf("它们的和是%d,积是%d",x + y,x * y);
+//
+//	return 0;
+
+//int main()
+//{
+//	int x = 0, y = 0;
+//	scanf("%d%d", &x, &y);
+//	printf("整数x:%d\n",x);
+//	printf("整数y:%d\n", y);
+//	printf("x的值是y的%d%%\n", 100 * x / y);
+//	return 0;
+//}
 
 
-
-
+//int main()
+//{
+//	int year = 0,month = 0,FEB = 0;
+//	scanf("%d%d",&year,&month);
+//	if (!(year % 4) && year % 100 || !(year % 400))
+//	{
+//		FEB = 29;
+//	}
+//	else
+//	{
+//		FEB = 28;
+//	}
+//	switch(month)
+//	{
+//	case 1:
+//	case 3:
+//	case 5:
+//	case 7:
+//	case 8:
+//	case 10:
+//	case 12:
+//		printf("%d", 31);
+//		break;
+//	case 4:
+//	case 6:
+//	case 9:
+//	case 11:
+//		printf("%d", 30);
+//		break;
+//	case 2:
+//		printf("%d", FEB);
+//		break;
+//
+//	}
+//
+//	return 0;
+//}
 
 //#include<math.h>
 //#include <stdio.h>
@@ -58,9 +128,6 @@ int main()
 //	putchar(ch);
 //	return 0;
 //}
-
-
-
 //int main()
 //{
 //	int a = 0, b;
@@ -83,7 +150,6 @@ int main()
 //	printf("23200116320周刘荣");
 //	return 0;
 //}
-#if 0
 
 //#define _CRT_SECURE_NO_WARNINGS
 //#include<stdio.h>
