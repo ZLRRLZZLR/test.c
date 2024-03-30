@@ -4,12 +4,393 @@
 #include<stdlib.h>
 #include<assert.h>
 
+//
+//int main()
+//{
+//	FILE* pf = fopen("test.txt", "r");
+//	if (pf == NULL)
+//	{
+//		perror("fopen");
+//		return 1;
+//	}
+//	//读取
+//	int ch = 0;
+//	while ((ch = fgetc(pf)) != EOF)
+//	{
+//		printf("%c\n", ch);
+//	}
+//	//判断是什么原因导致读取结束的
+//	if (feof(pf))
+//	{
+//		printf("遇到文件末尾，读取正常结束\n");
+//	}
+//	else if (ferror(pf))
+//	{
+//		perror("fgetc");
+//	}
+//
+//	return 0;
+//}
+
+//
+//int main()
+//{
+//	int arr[] = { 1,2,3,4,5 };
+//
+//	FILE*pf = fopen("test.txt", "wb");
+//	if (pf == NULL)
+//	{
+//		perror("fopen");
+//		return 1;
+//	}
+//	//写数据
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	fwrite(arr, sizeof(arr[0]), sz, pf);//以二进制的形式写进去的
+//
+//	fclose(pf);
+//	pf = NULL;
+//
+//	return 0;
+//}
+
+////以二进制的形式读取
+//
+//int main()
+//{
+//	int arr[5] = {0};
+//
+//	FILE* pf = fopen("test.txt", "rb");
+//	if (pf == NULL)
+//	{
+//		perror("fopen");
+//		return 1;
+//	}
+//	//读数据
+//	fread(arr, sizeof(arr[0]), 5, pf);//以二进制的形式写进去的
+//	int i = 0;
+//	for (i = 0; i < 5; i++)
+//	{
+//		printf("%d ", arr[i]);//1 2 3 4 5
+//	}
+//
+//	fclose(pf);
+//	pf = NULL;
+//
+//	return 0;
+//}
+
+//#define _CRT_SECURE_NO_WARNINGS 
+//
+//#include <stdio.h>
+//struct S
+//{
+//	char name[20];
+//	int age;
+//	float score;
+//};
+//int main()
+//{
+//	struct S s = { 0 };
+//	//想从文件test.txt中读取数据放在s中
+//	FILE* pf = fopen("test.txt", "r");
+//	if (pf == NULL)
+//	{
+//		perror("fopen");
+//		return 1;
+//	}
+//	//读文件 
+//	fscanf(pf, "%s %d %f", s.name, &(s.age), &(s.score));
+//
+//	//打印在屏幕上看看
+//	
+//	fprintf(stdout, "%s %d %f\n", s.name, s.age, s.score);//等价于printf("%s %d %f\n", s.name, s.age, s.score);
+//
+//	fclose(pf);
+//	pf = NULL;
+//
+//	return 0;
+//}
+//struct S
+//{
+//	char name[20];
+//	int age;
+//	float score;
+//};
+//
+//int main()
+//{
+//	struct S s = { "张三", 20, 65.5f };
+//	//想把s中的数据存放在文件中
+//	FILE* pf = fopen("test.txt", "w");
+//	if (pf == NULL)
+//	{
+//		perror("fopen");
+//		return 1;
+//	}
+//	//写文件 - 是以指定的形式写进去的
+//	fprintf(pf, "%s %d %f", s.name, s.age, s.score);
+//
+//	fclose(pf);
+//	pf = NULL;
+//
+//	return 0;
+//}
+
+//
+//
+//struct S
+//{
+//	char name[20];
+//	int age;
+//	float score;
+//};
+//
+//int main()
+//{
+//	struct S s = { 0 };
+//	想从文件test.txt中读取数据放在s中
+//	FILE* pf = fopen("test.txt", "r");
+//	if (pf == NULL)
+//	{
+//		perror("fopen");
+//		return 1;
+//	}
+//	读文件 
+//	fscanf(pf, "%s %d %f", s.name, &(s.age), &(s.score));
+//
+//	打印在屏幕上看看
+//	printf("%s %d %f\n", s.name, s.age, s.score);//
+//	fprintf(stdout, "%s %d %f\n", s.name, s.age, s.score);
+//
+//	fclose(pf);
+//	pf = NULL;
+//
+//	return 0;
+//}
+
+//int main()
+//{
+//	//1. 打开文件
+//	FILE* pf = fopen("test.txt", "r");
+//	if (pf == NULL)
+//	{
+//		perror("fopen");
+//		return 1;
+//	}
+//	//读文件
+//	char arr[20] = { 0 };
+//
+//	while (fgets(arr, 20, pf) != NULL)
+//	{
+//		printf("%s", arr);
+//	}
+//
+//
+//	//2. 关闭文件
+//	fclose(pf);
+//	pf = NULL;
+//
+//	return 0;
+//}
+
+//int main()
+//{
+//	//1. 打开文件
+//	FILE* pf = fopen("text.txt", "r");
+//	if (pf == NULL)
+//	{
+//		perror("fopen");
+//		return 1;
+//	}
+//	//读文件
+//	char arr[20] = "xxxxxxxxxxxxxxxxxx";
+//	fgets(arr, 20, pf);
+//	printf("%s",arr);
+//
+//	/*fgets(arr, 20, pf);
+//	printf("%s", arr);*/
+//
+//	//2. 关闭文件
+//	fclose(pf);
+//	pf = NULL;
+//
+//	return 0;
+//}
 
 
 
 
 
 
+
+
+
+
+//int main()
+//{
+//	//打开文件
+//	FILE* pf = fopen("text.txt", "w");
+//	if (pf == NULL)
+//	{
+//		perror("fopen");
+//		return 1;
+//	}
+//	//读文件
+//	fputs("hello ", pf);
+//	fputs("hello ", pf);
+//
+//	
+//	//关闭文件
+//	fclose(pf);
+//	pf = NULL;
+//
+//	return 0;
+//}
+
+//int main()
+//{
+//	//打开文件
+//	FILE* pf = fopen("test.txt", "w");
+//	if (pf == NULL)
+//	{
+//		perror("fopen");
+//		return 1;
+//	}
+//	//写文件
+//	//fputc('a', pf);
+//	//fputc('b', pf);
+//	//fputc('c', pf);
+//
+//	char ch = 0;
+//	for (ch = 'a'; ch <= 'z'; ch++)
+//	{
+//		fputc(ch, pf);
+//	}
+//
+//	//关闭文件
+//	fclose(pf);
+//	pf = NULL;
+//
+//	return 0;
+//}
+//int main()
+//{
+//	//打开文件
+//	FILE* pf = fopen("test.txt", "r");
+//	if (pf == NULL)
+//	{
+//		perror("fopen");
+//		return 1;
+//	}
+//	//读文件
+//	int ch = 0;
+//	while ((ch = fgetc(pf)) != EOF)
+//	{
+//		printf("%c", ch);
+//	}
+//
+//	//关闭文件
+//	fclose(pf);
+//	pf = NULL;
+//
+//	return 0;
+//}
+
+
+
+
+
+
+
+//int main()
+//{
+//	FILE* pf = fopen("test.txt", "r");
+//	if (NULL == pf)
+//	{
+//		perror("fopen");
+//		return 1;
+//	}
+//
+//	int ch = fgetc(pf);
+//	printf("%c\n", ch);
+//
+//	fseek(pf, -4, SEEK_END);
+//	ch = fgetc(pf);
+//	printf("%c\n", ch);//当前光标位置为文件末尾向左偏移4个字节
+//
+//	rewind(pf);//光标回到起始位置
+//
+//	ch = fgetc(pf);
+//	printf("%c\n", ch);
+//
+//
+//	fclose(pf);
+//	pf = NULL;
+//	return 0;
+//}
+
+
+
+//int main()
+//{
+//	FILE* pf = fopen("text.txt", "w");
+//	if(NULL == pf)
+//	{
+//		perror("fopen");
+//		return 1;
+//	}
+//	fputs("This is an example", pf);
+//
+//	fclose(pf);
+//	pf = NULL;
+//	return 0;
+//}
+
+
+
+
+//int main()
+//{
+//	FILE* pf = fopen("test.txt", "r");
+//	if (NULL == pf)
+//	{
+//		perror("fopen");
+//		return 1;
+//	}
+//	fseek(pf, 0, SEEK_END);//相对于末尾位置偏移量为0，当前光标在文件末尾
+//	printf("%d\n", ftell(pf));
+//
+//	fclose(pf);
+//	pf = NULL;
+//	return 0;
+//}
+
+
+
+//int main()
+//{
+//	FILE* pf = fopen("test.txt", "r");
+//	if (NULL == pf)
+//	{
+//		perror("fopen");
+//		return 1;
+//	}
+//	int ch = 0;
+//	fseek(pf, 4, SEEK_CUR);
+//	ch = fgetc(pf);
+//	printf("相对文件现在位置向右偏移4个字节：%c\n", ch);
+//	fseek(pf, 5, SEEK_SET);
+//	ch = fgetc(pf);
+//	printf("相对文件开始位置向右偏移5个字节%c\n", ch);
+//	fseek(pf, -4, SEEK_END);
+//	ch = fgetc(pf);
+//	printf("相对文件末尾位置向左偏移4个字节%c\n", ch);
+//
+//	fclose(pf);
+//	pf = NULL;
+//
+//	return 0;
+//}
 
 #if 0
 int main()
@@ -103,70 +484,7 @@ int main()
 	return;
 }
 
-int main()
-{
-	FILE* pf = fopen("text.txt","r");
-	if(NULL == pf)
-	{
-		perror("fopen");
-		return 1;
-	}
-	int ch = fgetc(pf);
-	printf("%c\n",ch);
-	fseek(pf,-4,SEEK_END);
 
-	ch = fgetc(pf);
-	printf("%c\n",ch);
-	rewind(pf);
-	ch = fgetc(pf);
-	printf("%c\n", ch);
-
-
-	fclose(pf);
-	pf = NULL;
-	return 0;
-}
-
-int main()
-{
-	FILE* pf = fopen("text.txt", "r");
-	if(NULL == pf)
-	{
-		perror("fopen");
-		return 1;
-	}
-	int ch = fgetc(pf);
-	printf("%c\n", ch);
-	//fseek(pf,-4,SEEK_END)；
-	fseek(pf, 0, SEEK_END);
-	printf("%d\n",ftell(pf));
-
-	fclose(pf);
-	pf = NULL;
-	return 0;
-}
-int main()
-{
-	FILE* pf = fopen("test.txt", "r");
-	if(NULL == pf)
-	{
-		perror("fopen");
-		return 1;
-	}
-	int ch = fgetc(pf);
-	printf("%c\n", ch);
-	//fseek(pf, 4, SEEK_CUR);
-	//fseek(pf, 5, SEEK_SET);
-	fseek(pf, -4, SEEK_END);
-
-	ch = fgetc(pf);
-	printf("%c\n", ch);
-
-	fclose(pf);
-	pf = NULL;
-
-	return 0;
-}
 
 int main()
 {
