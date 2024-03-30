@@ -3,12 +3,307 @@
 #include<math.h>
 #include<stdlib.h>
 #include<assert.h>
-//青蛙跳台阶，汉诺塔,KMP算法
+
+
+
+
 
 
 
 
 #if 0
+int main()
+{
+	FILE* pfin = fopen("test.txt","r");
+	if (NULL == pfin)
+	{
+		perror("fopen:tset.txt");
+		return 1;
+	}
+	FILE* pfout = fopen("test2.txt", "w");
+	if (NULL == pfout)
+	{
+		fclose(pfin);
+		perror("fopen:tset2.txt");
+		return 1;
+	}
+	int ch = 0;
+	while ((ch = fgetc(pfin)) != EOF)
+	{
+		fputc(ch, pfout);
+	}
+
+	fclose(pfin);
+	pfin = NULL;
+	fclose(pfout);
+	pfout = NULL;
+
+	return 0;
+}
+
+
+
+
+
+
+int main()
+{
+	FILE* pf = fopen("test.txt", "w");
+	if (NULL == pf)
+	{
+		perror("fopen");
+		return 1;;
+	}
+	char ch = 0;
+	for(ch = 'a';ch <= 'z';ch++)
+	{
+		fputc(ch, pf);
+	}
+
+	if (feof(pf))
+	{
+		printf("遇见文件末尾，读取正常结束\n");
+	}
+	else if(ferror(pf))
+	{
+		printf("fputc");
+	}
+	fclose(pf);
+	pf = NULL;
+	return 0;
+}
+
+
+
+
+
+int main()
+{
+	FILE* pf = fopen("text.txt","r");
+	if (NULL == pf)
+	{
+		perror("fopen");
+	}
+	int ch = 0;
+	while ((ch = fgetc(pf) != EOF))
+	{
+		printf("%c\n", ch);
+	}
+
+	if (feof(pf))
+	{
+		printf("遇见文件末尾，读取正常结束\n");
+	}
+	else if(ferror(pf))
+	{
+		printf("fgetc");
+	}
+	fclose(pf);
+	pf = NULL;
+	return;
+}
+
+int main()
+{
+	FILE* pf = fopen("text.txt","r");
+	if(NULL == pf)
+	{
+		perror("fopen");
+		return 1;
+	}
+	int ch = fgetc(pf);
+	printf("%c\n",ch);
+	fseek(pf,-4,SEEK_END);
+
+	ch = fgetc(pf);
+	printf("%c\n",ch);
+	rewind(pf);
+	ch = fgetc(pf);
+	printf("%c\n", ch);
+
+
+	fclose(pf);
+	pf = NULL;
+	return 0;
+}
+
+int main()
+{
+	FILE* pf = fopen("text.txt", "r");
+	if(NULL == pf)
+	{
+		perror("fopen");
+		return 1;
+	}
+	int ch = fgetc(pf);
+	printf("%c\n", ch);
+	//fseek(pf,-4,SEEK_END)；
+	fseek(pf, 0, SEEK_END);
+	printf("%d\n",ftell(pf));
+
+	fclose(pf);
+	pf = NULL;
+	return 0;
+}
+int main()
+{
+	FILE* pf = fopen("test.txt", "r");
+	if(NULL == pf)
+	{
+		perror("fopen");
+		return 1;
+	}
+	int ch = fgetc(pf);
+	printf("%c\n", ch);
+	//fseek(pf, 4, SEEK_CUR);
+	//fseek(pf, 5, SEEK_SET);
+	fseek(pf, -4, SEEK_END);
+
+	ch = fgetc(pf);
+	printf("%c\n", ch);
+
+	fclose(pf);
+	pf = NULL;
+
+	return 0;
+}
+
+int main()
+{
+	int arr[5] = { 0 };
+
+	FILE* pf = fopen("test.txt", "rb");
+	if (NULL == pf)
+	{
+		perror("fopen");
+		return 1;
+	}
+	int i = 0;
+	while (fread(&arr[i], sizeof(int), 1, pf))
+	{
+		printf("%d ", arr[i]);
+		i++;
+	}
+
+	fclose(pf);
+	pf = NULL;
+	return 0;
+}
+
+int main()
+{
+	int arr[] = {1,2,3,4,5};
+	FILE* pf = fopen("test.txt", "wb");
+	if (pf == NULL)
+	{
+		perror("fopen");
+		return 1;
+	}
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	fwrite(arr, sizeof(arr[0]), sz, pf);
+	fclose(pf);
+	pf = NULL;
+
+	return 0;
+}
+int main()
+{
+	int arr[5] = { 0 };
+	FILE* pf = fopen("test.txt","rb");
+	if(NULL == pf)
+	{
+		perror("fopen");
+		return ;
+	}
+	fread(arr,sizeof(arr[0]),5,pf);
+	int i = 0;
+	for(i = 0;i < 5;i++)
+	{
+		printf("%d",arr[i]);
+	}
+
+	fclose(pf);
+	pf = NULL;
+
+	return 0;
+}
+
+struct S
+{
+	char name[20];
+	int age;
+	float score;
+
+};
+
+
+int main()
+{
+	char buf[200] = { 0 };
+	struct S s = { "张三",20,65.5f };
+	sprintf(buf,"%s %d %f",s.name,s.age,s.score);
+	printf("1以字符串的形式：%s\n",buf);
+	struct S t = { 0 };
+	sscanf(buf,"%s %d %f",t.name,&(t.age),&(t.score));
+	printf("2按照格式打印 ：%s %d %f\n", t.name, t.age, t.score);
+
+	return 0;
+}
+int main()
+{
+	fputc('a', stdout);
+	return 0;
+}
+
+struct S
+{
+	char name[20];
+	int age;
+	float score;
+
+};
+
+int main()
+{
+	struct S s = {"张三",20,65.5f};
+	FILE* pf = fopen("test.txt", "w");
+	if(pf == NULL)
+	{
+		perror("fopen");
+		return 1;
+	}
+	fprintf(pf, "%s %d %f", s.name, s.age, s.score);
+
+	fclose(pf);
+	pf = NULL;
+	return 0;
+}
+struct S
+{
+	char name[20];
+	int age;
+	float score;
+
+};
+
+int main()
+{
+	struct S s = { 0 };
+	FILE* pf = fopen("test.txt", "r");
+	if(pf == NULL)
+	{
+		perror("fopen");
+		return 1;
+	}
+	fscanf(pf, "%s %d %f", s.name, &(s.age), &(s.score));
+	printf("%s %d %f\n", s.name, s.age, s.score);
+	fprintf(stdout,"%s %d %f\n", s.name, s.age, s.score);
+
+	fclose(pf);
+	pf = NULL;
+	return 0;
+}
+
 #define SWAP(a) ((a)<<1)
 int main()
 {
