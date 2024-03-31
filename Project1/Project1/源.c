@@ -1,9 +1,107 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
-#include<math.h>
+#include"vld.h"
 #include<stdlib.h>
-#include<assert.h>
+//int main()
+//{
+//	int** arr = (int**)malloc(sizeof(int*) * 3);
+//
+//	for (int i = 0; i < 3; i++)
+//	{
+//		arr[i] = (int*)malloc(5 * sizeof(int));
+//	}
+//
+//	//进行赋值
+//	for (int i = 0; i < 3; i++)
+//	{
+//		for (int j = 0; j < 5; j++)
+//		{
+//			arr[i][j] = 1;
+//		}
+//	}
+//	//打印
+//	for (int i = 0; i < 3; i++)
+//	{
+//		for (int j = 0; j < 5; j++)
+//		{
+//			printf("%d ", arr[i][j]);
+//		}
+//		printf("\n");
+//	}
+//
+//	return 0;
+//}
+//
+//int main()
+//{
+//	int** arr = (int**)malloc(3 * sizeof(int*));
+//	if (arr == NULL)
+//	{
+//		perror("malloc");
+//		return 1;
+//	}
+//	for (int i = 0; i < 3; i++)
+//	{
+//		arr[i] = (int)malloc(5 * sizeof(int));
+//		if (arr[i] == NULL)
+//		{#include<stdio.h>
+int main()
+{
+	int** arr = (int**)malloc(sizeof(int*) * 3);
 
+	for (int i = 0; i < 3; i++)
+	{
+		arr[i] = (int*)malloc(5 * sizeof(int));
+	}
+
+	//进行赋值
+	for (int i = 0; i < 3; i++)
+	{
+		for (int j = 0; j < 5; j++)
+		{
+			arr[i][j] = 1;
+		}
+	}
+	//打印
+	for (int i = 0; i < 3; i++)
+	{
+		for (int j = 0; j < 5; j++)
+		{
+			printf("%d ", arr[i][j]);
+		}
+		printf("\n");
+	}
+
+	return 0;
+}
+//			perror("malloc");
+//			return 1;
+//		}
+//	}
+//	for (int i = 0; i < 3; i++)
+//	{
+//		for (int j = 0; j < 5; j++)
+//		{
+//			arr[i][j] = j;
+//		}
+//	}
+//	for (int i = 0; i < 3; i++)
+//	{
+//		free(arr[i]);
+//	}
+//	free(arr);
+//	arr = NULL;
+//	return 0;
+//}
+
+
+//extern int add(int x, int y);
+//int main()
+//{
+//	int ret = add(3, 5);
+//	printf("%d",ret);
+//	return 0;
+//}
 //
 //int main()
 //{
@@ -897,38 +995,7 @@ int main()
 //
 //}
 
-int main()
-{
-	int** arr = (int**)malloc(3 * sizeof(int*));
-	if (arr == NULL)
-	{
-		perror("malloc");
-		return 1;
-	}
-	for (int i = 0; i < 3; i++)
-	{
-		arr[i] = (int)malloc(5 * sizeof(int));
-		if (arr[i] == NULL)
-		{
-			perror("malloc");
-			return 1;
-		}
-	}
-	for (int i = 0; i < 3; i++)
-	{
-		for (int j = 0; j < 5; j++)
-		{
-			arr[i][j] = j;
-		}
-	}
-	for (int i = 0; i < 3; i++)
-	{
-		free(arr[i]);
-	}
-	free(arr);
-	arr = NULL;
-	return 0;
-}
+
 
 
 enum State
