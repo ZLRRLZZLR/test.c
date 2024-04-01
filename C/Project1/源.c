@@ -1,20 +1,134 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 #include<stdlib.h>
+#include<math.h>
+
 
 int main()
 {
-	double c = 0,a = 0, b = 0;
-	puts("请输入两个整数");
-	printf("整数a:");
-	scanf("%d", &a);
-	printf("整数b:");
-	scanf("%d", &b);
-	c = 100 * a / b ;
-	printf("a是b的%0.6lf%%", c);
+	puts("请输入");
+
 	return 0;
 }
 
+
+
+//int main()
+//{
+//	int a = 0, b = 0;
+//	scanf("%d%d",&a,&b);
+//	printf("%d\n",a > b);
+//	printf("%d\n", a == b);
+//	printf("%d\n", a < b);
+//	printf("%d\n", a <= b);
+//	printf("%d\n", a >= b);
+//
+//
+//	return 0;
+//}
+
+//int main()
+//{
+//	int a = 0 ,b = 0;
+//	puts("请输入两个整数：");
+//	printf("整数A:");
+//	scanf("%d",&a);
+//	printf("整数B:");
+//	scanf("%d", &b);
+//	if (a > b)
+//		printf("A大于B");
+//	else if(a < b)
+//	    printf("A小于B");
+//	else
+//	    printf("A和B相等");
+//
+//	return 0;
+//}
+
+//int main()
+//{
+//	int a = 0;
+//	printf("请输入一个整数：");
+//	scanf("%d", &a);
+//	if (a >= 0)
+//		printf("%d", a);
+//	else
+//		printf("%d", -a);
+//	return 0;
+//}
+
+
+//
+//int main()
+//{
+//	int a = 0;
+//	printf("请输入一个整数：");
+//	scanf("%d",&a);
+//	printf("%d",abs(a));
+//	return 0;
+//}
+
+//int main()
+//{
+//	int no;
+//	puts("请输入一个整数：");
+//	scanf("%d",&no);
+//
+//	if (no == 0)
+//		puts("该整数为正数。");
+//	else if (no > 0)
+//		puts("该整数为正数。");
+//	else
+//		puts("该整数为负数。");
+//
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	int a = 0, b = 0;
+//	printf("请输入两个整数\n");
+//	printf("整数A:");
+//	scanf("%d",&a);
+//	printf("整数B:");
+//	scanf("%d", &b);
+//	if (a % b)
+//	{
+//		printf("B不是A的约数");
+//	}
+//	else
+//	{
+//		printf("B是A的约数");
+//	}
+//	return 0;
+//}
+
+
+
+//int main()
+//{
+//	float a = 0;
+//	printf("请输入您的身高：");
+//	scanf("%f",&a);
+//	a = (a - 100) * 0.9;
+//	printf("您的标准体重是%0.1f公斤",a);
+//
+//	return 0;
+//}
+
+//int main()
+//{
+//	double c = 0,a = 0, b = 0;
+//	puts("请输入两个整数");
+//	printf("整数a:");
+//	scanf("%d", &a);
+//	printf("整数b:");
+//	scanf("%d", &b);
+//	c = 100 * a / b ;
+//	printf("a是b的%0.6lf%%", c);
+//	return 0;
+//}
 
 //int main()
 //{
@@ -329,15 +443,6 @@ int main()
 //	return 0;
 //}
 
-
-
-
-
-
-
-
-
-
 //int main()
 //{
 //	//打开文件
@@ -407,11 +512,6 @@ int main()
 //
 //	return 0;
 //}
-
-
-
-
-
 
 
 //int main()
