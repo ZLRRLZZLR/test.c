@@ -3,13 +3,241 @@
 #include<stdlib.h>
 #include<math.h>
 
-
 int main()
 {
-	puts("请输入");
-
+	int a, b, min;
+	scanf("%d%d%d",&a,&b,&min);
+	min = (a > min ? min : a);
+	min = (b > min ? min : b);
+	printf("%d",min);
 	return 0;
 }
+
+
+//int main()
+//{
+//	int n1, n2;
+//	puts("请输入两个整数。");
+//	printf("整数1："); scanf("%d",&n1);
+//	printf("整数2："); scanf("%d",&n2);
+//	if (n1 > n2)
+//		printf("它们的差是%d。\n", n1 - n2);
+//	else
+//		printf("它们的差是%d。\n", n2 - n1);
+//	return 0;
+//}
+
+
+
+//int main()
+//{
+//	int a = 0, b = 0, c = 0, max = 0;
+//	scanf("%d%d%d%d",&a,&b,&c,&max);
+//	if (max < a)
+//		max = a;
+//	if (max < b)
+//		max = b;
+//	if (max < c)
+//		max = c;
+//	printf("%d", max);
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	int a, b, min;
+//	scanf("%d%d%d",&a,&b,&min);
+//	if(a < min)
+//	{
+//		min = a;
+//	}
+//	if(b < min)
+//	{
+//		min = b;
+//	}
+//	printf("%d",min);
+//
+//	return 0;
+//}
+
+
+
+
+#if 0
+
+//#define _CRT_SECURE_NO_WARNINGS
+//#include<stdio.h>
+//
+//int main()
+//{
+//	int num = 10, i, a;
+//
+//	for (i = 1; i <= 5; i++)
+//	{
+//		scanf("%d", &a);
+//		if (a < num)
+//			printf("小了\n");
+//		else if (a > num)
+//			printf("大了\n");
+//		else
+//		{
+//			printf("猜对了\n");
+//			break;
+//		}
+//
+//	}
+//	if (i = 6)
+//	{
+//		printf("你输了\n");
+//	}
+//	printf("23200116320周刘荣");
+//	return 0;
+//}
+//
+
+//#define _CRT_SECURE_NO_WARNINGS
+//#include<stdio.h>
+//
+//int main()
+//{
+//	int i = 0;
+//	printf("6\n");
+//	for (i = 10; i <= 100; i++)
+//	{
+//		if ((i > 10) && (i % 10 == 6) && (i % 3 == 0))
+//			printf("%d\n", i);
+//	}
+//	printf("23200116320周刘荣");
+//	return 0;
+//}
+
+//
+//#define _CRT_SECURE_NO_WARNINGS
+//#include<stdio.h>
+//#include<math.h>
+//int main()
+//{
+//	int sn = 0, i, n;
+//	scanf("%d", &n);
+//	for (i = 1; i <= n; i++)
+//	{
+//		sn += i * i;
+//	}
+//	printf("sn=%d\n", sn);
+//	printf("23200116320周刘荣");
+//
+//	return 0;
+//}
+
+//
+// 
+//#define _CRT_SECURE_NO_WARNINGS
+//#include<stdio.h>
+//#include<math.h>
+//int main()
+//{
+//	int m, i;
+//	printf("请输入一个整数：");
+//	scanf("%d", &m);
+//	for (i = 2; i < m; i++)
+//		if (m % i == 0)break;
+//	if (i >= m)
+////		printf("%d是素数\n", m);
+////	else
+////		printf("%d不是素数\n", m);
+////	printf("23200116320周刘荣");
+////
+////	return 0;
+//}
+
+
+//
+//#define _CRT_SECURE_NO_WARNINGS
+//#include<stdio.h>
+//int main()
+//{
+//	int  s = 0;
+//	int i = 0;
+//	for (i = 1; i <= 100; i++)
+//	{
+//		s += i;
+//	}
+//	printf("%d\n", s);
+//
+//	printf("23200116320周刘荣");
+//
+//	return 0;
+//}
+
+
+//#define _CRT_SECURE_NO_WARNINGS
+//#include<stdio.h>
+//int main()
+//{
+//
+//	long f1 = 1, f2 = 1;
+//	int i;
+//	for (i = 1; i <= 20; i++)
+//	{
+//		printf("%12ld%12ld", f1, f2);
+//		if (i % 2 == 0)
+//			printf("\n");
+//		f1 = f1 + f2;
+//		f2 = f2 + f1;
+//	}
+//	printf("23200116320周刘荣");
+//
+//	return 0;
+//}
+
+//#define _CRT_SECURE_NO_WARNINGS
+//#include<stdio.h>
+//int main()
+//{
+//	int number, sum = 0;
+//	scanf("%d", &number);
+//
+//	while (number > 0)
+//	{
+//		if (number % 2 != 0)
+//			sum = sum + number;
+//		scanf("%d", &number);
+//	}
+//	printf("sum=%d\n", sum);
+//	printf("23200116320周刘荣");
+//
+//	return 0;
+//}
+
+//int main()
+//{
+//	int x, y;
+//	int i = 0;
+//	for (; i <= 100000; i++)
+//	{
+//		y = i;
+//		x = sqrt((double)(y + 100));
+//		if (x * x == y + 100)
+//		{
+//			x = sqrt((double)(y + 100 + 168));
+//			if (x * x == y + 100 + 168)
+//			{
+//				printf("%d\n",i);
+//			}
+//		}
+//		
+//	}
+//	printf("23200116320周刘荣");
+//	return 0;
+//}
+
+//int main()
+//{
+//	puts("请输入");
+//
+//	return 0;
+//}
 
 
 
@@ -604,7 +832,6 @@ int main()
 //	return 0;
 //}
 
-#if 0
 int main()
 {
 	FILE* pfin = fopen("test.txt","r");
