@@ -5,14 +5,21 @@
 
 int main()
 {
-	int a, b, min;
-	scanf("%d%d%d",&a,&b,&min);
-	min = (a > min ? min : a);
-	min = (b > min ? min : b);
-	printf("%d",min);
+
+
+
 	return 0;
 }
 
+//int main()
+//{
+//	int a, b, min;
+//	scanf("%d%d%d",&a,&b,&min);
+//	min = (a > min ? min : a);
+//	min = (b > min ? min : b);
+//	printf("%d",min);
+//	return 0;
+//}
 
 //int main()
 //{
@@ -28,7 +35,6 @@ int main()
 //}
 
 
-
 //int main()
 //{
 //	int a = 0, b = 0, c = 0, max = 0;
@@ -42,7 +48,6 @@ int main()
 //	printf("%d", max);
 //	return 0;
 //}
-
 
 //int main()
 //{
@@ -60,9 +65,6 @@ int main()
 //
 //	return 0;
 //}
-
-
-
 
 #if 0
 
