@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Contact.h">
+    <ClInclude Include="contact.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\SeqList\SeqList\SeqList.h">
+    <ClInclude Include="seqlist.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -26,7 +26,10 @@
     <ClCompile Include="Contact.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\SeqList\SeqList\SeqList.c">
+    <ClCompile Include="seqlist.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test2.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

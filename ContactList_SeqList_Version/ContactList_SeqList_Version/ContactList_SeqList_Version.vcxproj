@@ -127,12 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\SeqList\SeqList\SeqList.h" />
-    <ClInclude Include="Contact.h" />
+    <ClInclude Include="contact.h" />
+    <ClInclude Include="seqlist.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\SeqList\SeqList\SeqList.c" />
     <ClCompile Include="Contact.c" />
+    <ClCompile Include="seqlist.c" />
+    <ClCompile Include="test2.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
