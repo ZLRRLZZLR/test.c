@@ -1,5 +1,6 @@
 #include"SeqList.h"
 
+
 void SeqList_test1(void)
 {
 	SL ps;
@@ -16,6 +17,7 @@ void SeqList_test1(void)
 	SLPrint(ps);
 }
 
+
 void SeqList_test2(void)
 {
 	SL ps;
@@ -27,10 +29,10 @@ void SeqList_test2(void)
 	SLPushBack(&ps, 4);
 	SLPrint(ps);
 	SLInsert(&ps, 0, 6);
-	SLPrint(ps);
-	SLInsert(&ps, 4, 8);
-	SLPrint(ps);
-	SLInsert(&ps, 3, 7);
+	//SLPrint(ps);
+	//SLInsert(&ps, 4, 8);
+	//SLPrint(ps);
+	//SLInsert(&ps, 3, 7);
 	SLPrint(ps);
 	SLErase(&ps, 0);
 	SLPrint(ps);
@@ -39,7 +41,9 @@ void SeqList_test2(void)
 	SLErase(&ps, 1);
 	SLPrint(ps);
 
+
 }
+
 
 void SeqList_test3(void)
 {
@@ -50,7 +54,7 @@ void SeqList_test3(void)
 	SLPushFront(&ps, 1);
 	SLPushBack(&ps, 3);
 	SLPushBack(&ps, 4);
-	SLPrint(ps); 
+	SLPrint(ps);
 	SLFind(ps, 4);
 	int ret = SLFind(ps, 2);
 	printf("%d", ret);
@@ -60,9 +64,12 @@ void SeqList_test3(void)
 int main()
 {
 
-	SeqList_test1();
 
-	SeqList_test2();
+	//SeqList_test1();
+
+
+	//SeqList_test2();
+
 
 	SeqList_test3();
 	return 0;
