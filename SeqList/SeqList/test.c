@@ -1,6 +1,7 @@
 #include"SeqList.h"
 
 
+
 void SeqList_test1(void)
 {
 	SL ps;
@@ -64,13 +65,13 @@ void SeqList_test3(void)
 int main()
 {
 
-
 	//SeqList_test1();
 
 
 	//SeqList_test2();
 
 
-	SeqList_test3();
+	//SeqList_test3();
+
 	return 0;
 }
