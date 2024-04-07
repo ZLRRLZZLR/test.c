@@ -28,9 +28,9 @@ void SLCheckCapacity(SL* ps)
 	assert(ps);
 	if (ps->size == ps->capacity)
 	{
-		int newcapacity = ps->capacity = 0 ? INIT_CAPACITY : 2 * ps->capacity;
+		int newcapacity = ps->capacity == 0 ? INIT_CAPACITY : 2 * ps->capacity;
 		SLDataType* tmp = (SLDataType*)realloc(ps->arr, newcapacity * sizeof(SLDataType));
-		if (tmp == NULL)
+		if (NULL == tmp)
 		{
 			perror("realloc:");
 			exit(1);
@@ -50,13 +50,11 @@ void SLPushFront(SL* ps, SLDataType data)
 	assert(ps);
 	SLCheckCapacity(ps);
 
-
 	int i = 0;
 	for (i = ps->size; i > 0; i--)
 	{
 		ps->arr[i] = ps->arr[i - 1];
 	}
-
 
 	ps->arr[0] = data;
 	ps->size++;
@@ -69,6 +67,7 @@ void SLPushBack(SL* ps, SLDataType data)
 	assert(ps);
 	SLCheckCapacity(ps);
 	ps->arr[ps->size++] = data;
+
 }
 
 

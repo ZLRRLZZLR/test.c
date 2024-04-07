@@ -4,6 +4,7 @@
 #include<stdlib.h>
 #include<assert.h>
 #include<string.h>
+#include"vld.h"
 #include"contact.h"
 
 #define INIT_CAPACITY 4

@@ -9,7 +9,8 @@
 
 typedef struct SeqList contact;
 
-
+//通讯录修改菜单
+void contactmenu();
 //用户数据
 
 typedef struct PersonInfo

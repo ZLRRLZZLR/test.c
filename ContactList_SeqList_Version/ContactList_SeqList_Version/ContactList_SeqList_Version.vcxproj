@@ -132,8 +132,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Contact.c" />
+    <ClCompile Include="function.c" />
     <ClCompile Include="seqlist.c" />
     <ClCompile Include="test2.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="contact.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -47,10 +47,12 @@ void LoadContact(contact* con)
 		exit(1);
 	}
 	PeoInfo info;
-	while(fread(&info,sizeof(info),1,pf))
+	while(fread(&info,sizeof(PeoInfo),1,pf))
 	{
 		SLPushBack(con, info);
 	}
+	fclose(pf);
+	pf = NULL;
 	puts("通讯录历史数据加载成功！");
 }
 
@@ -59,15 +61,17 @@ void LoadContact(contact* con)
 void AddContact(contact* con)
 {
 	assert(con);
-	PeoInfo peniof;
+
+	PeoInfo peniof ;
 	puts("请输入要添加的联系人姓名:");
 	scanf("%s", peniof.name);
 	int find = FindByName(con, peniof.name);
-	if(find >= 0)
+	if (find >= 0)
 	{
-		puts("您要添加的联系人信息已存在，无法重复添加");
+		puts("您要添加的联系人已存在！");
+		ShowContact(con);
 		return;
-	}
+	}	
 	puts("请输入要添加的联系人的性别:");
 	scanf("%s", peniof.gender);
 	puts("请输入要添加的联系人的年龄:");
@@ -77,7 +81,8 @@ void AddContact(contact* con)
 	puts("请输入要添加的联系人的地址:");
 	scanf("%s", peniof.addr);
 
-	SLPushFront(con, peniof);
+	SLPushBack(con, peniof);
+
 	puts("添加成功！");
 }
 
@@ -90,6 +95,7 @@ void DelContact(contact* con)
 	char name[NAME_MAX];
 	puts("请输入要删除的联系人的姓名");
 	scanf("%s",&name);
+
 	int find = FindByName(con, name);
 	if (find < 0)
 	{
@@ -200,11 +206,31 @@ void ModifyContact(contact* con)
 	}
 }
 
+//保存通讯录
+void SaveContact(contact* con)
+{
+	FILE* pf = fopen("contact.txt", "wb");
+	if(NULL == pf)
+	{
+		perror("fopen");
+		exit(1);
+	}
+	int i = 0;
+	for(i = 0;i < con->size;i++)
+	{
+		fwrite(con->arr + 1, sizeof(PeoInfo), 1, pf);
+	}
+	puts("通讯录数据保存成功！");
+	fclose(pf);
+	pf = NULL;
+}
+
 //销毁通讯录数据
 
 void DestroyContact(contact* con)
 {
 	assert(con);
+	SaveContact(con);
 	SLDestroy(con);
 	puts("销毁成功！");
 }
