@@ -71,7 +71,7 @@ int main()
 	//SeqList_test2();
 
 
-	//SeqList_test3();
+	SeqList_test3();
 
 	return 0;
 }
