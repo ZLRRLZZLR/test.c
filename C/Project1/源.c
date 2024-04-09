@@ -2,14 +2,195 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<math.h>
-
-int main()
-{
-
+#include<stdio.h>
+#include<math.h>
 
 
-	return 0;
-}
+//#include<stdio.h>
+//#include<math.h>
+//
+//#include<stdio.h>
+//
+//int main()
+//{
+//	int i, j;
+//	for (i = 1; i <= 5; i++)
+//	{
+//		for (j = 1; j <= 5 - i; j++)
+//		{
+//			printf(" ");
+//		}
+//		for (j = 1; j <= 2 * i - 1; j++)
+//		{
+//			printf("*");
+//		}
+//
+//		printf("\n");
+//
+//	}
+//	for (i = 5; i >= 1; i--)
+//	{
+//		for (j = 1; j <= 5 - i; j++)
+//		{
+//			printf(" ");
+//		}
+//		for (j = 1; j <= 2 * i - 1; j++)
+//		{
+//			printf("*");
+//		}
+//		printf("\n");
+//
+//	}
+//	printf("23200116320周刘荣");
+//	return 0;
+//}
+
+
+
+//
+//#include<stdio.h>
+//#include<math.h>
+//int main()
+//{
+//	int m, i, k, prime, n = 0;
+//	for (m = 101; m < 500; m++)
+//	{
+//		prime = 1;
+//		k = (int)sqrt((double)m);
+//		for (i = 2; i <= k; i++)
+//			if (m % i == 0) { prime = 0; break; }
+//		if (prime)
+//		{
+//			n++;
+//			printf("%5d", m);
+//			if (n % 7 == 0)
+//				printf("\n");
+//		}
+//
+//	}
+//	printf("23200116320周刘荣");
+//	return 0;
+//}
+//
+
+//int main()
+//{
+//	int a, b, c, d, l;
+//	printf("输入一个偶数：\n");
+//	scanf("%d", &a);
+//
+//	for (b = 3; b < a / 2; b = b + 2)
+//	{
+//		l = (int)sqrt((double)b);
+//		for (d = 2; d <= l; d++)
+//			if (b % d == 0)break;
+//		if (d > l)
+//		{
+//			c = a - b;
+//			l = (int)sqrt((double)c);
+//			for (d = 2; d <= l; d++)
+//				if (b % d == 0)break;
+//			if (d > l)
+//			{
+//				printf("%d=%d+%d\n", a, b, c);
+//				break;
+//			}
+//		}
+//
+//	}
+//	printf("23200116320周刘荣");
+//	return 0;
+//}
+
+//
+//#include<stdio.h>
+//
+//int main()
+//{
+//	int a, b, c;
+//	for (a = 1; a <= 4; a++)
+//		for (b = 1; b <= 4; b++)
+//			for (c = 1; c <= 4; c++)
+//				if (a != b && b != c && c != a)
+//					printf("%d %d %d\n", a, b, c);
+//
+//	printf("23200116320周刘荣");
+//	return 0;
+//}
+
+//
+//#include<stdio.h>
+//
+//int main()
+//{
+//	int i, j;
+//	for (i = 5; i >= 1; i--)
+//	{
+//		for (j = 1; j <= 5 - i; j++)
+//		{
+//			printf(" ");
+//		}
+//		for (j = 1; j <= 2 * i - 1; j++)
+//		{
+//			printf("*");
+//		}
+//		printf("\n");
+//
+//	}
+//	printf("23200116320周刘荣");
+//	return 0;
+//}
+//
+//
+//
+
+
+
+//#define _CRT_SECURE_NO_WARNINGS
+//#include<stdio.h>
+//int main()
+//{
+//	int x,y,c;
+//	for(x=0;5*x<=100;x++)
+//	{
+//		for(y=0;y*3<=100;y++)
+//		{
+//		c=100-x-y;
+//		if(((5*x+y*3+c/3) == 100)&&(x+y)<=100)
+//			printf("%d %d %d\n",x,y,c);
+//		}
+//	}
+//	printf("23200116320周刘荣");
+//	return 0;
+//}
+//#define _CRT_SECURE_NO_WARNINGS
+//#include<stdio.h>
+//#include<math.h>
+////int main()
+//{
+//	double n, t, s=0, x;
+//	scanf("%lf",&x);
+//	t = x;
+//	for (n = 1; fabs(t) >= 1e-7; n = n + 2)
+//	{
+//		t = t * (-x * x) / ((n - 1) * n);
+//		s += t;
+//	}
+//	printf("%lf\n", s);
+//	printf("23200116320周刘荣");
+//	return;
+//}
+
+
+
+
+//int main()
+//{
+//
+//
+//
+//	return 0;
+//}
 
 //int main()
 //{
