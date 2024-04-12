@@ -1,10 +1,109 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
-#include<stdlib.h>
-#include<math.h>
-#include<stdio.h>
-#include<math.h>
 
+
+
+
+
+////移除元素
+//int removeElement(int* nums, int numsSize, int val) {
+//	int i = 0;
+//	int j = 0;
+//	for (; i < numsSize;)
+//	{
+//		if (nums[i] == val)
+//		{
+//			i++;
+//		}
+//		else
+//		{
+//			nums[j++] = nums[i++];
+//		}
+//	}
+//	return j;
+//}
+//
+////合并有序数组
+//void merge(int* nums1, int nums1Size, int m, int* nums2, int nums2Size, int n)
+//{
+//	int l3 = nums1Size - 1;
+//	int l2 = n - 1;
+//	int l1 = m - 1;
+//	while (l1 >= 0 && l2 >= 0)
+//	{
+//		if (nums1[l1] > nums2[l2])
+//		{
+//			nums1[l3--] = nums1[l1--];
+//		}
+//		else
+//		{
+//			nums1[l3--] = nums2[l2--];
+//		}
+//	}
+//	while (l1 < 0 && l2 >= 0)
+//	{
+//		nums1[l3--] = nums2[l2--];
+//	}
+//}
+
+
+
+//#include<stdlib.h>
+//#include<math.h>
+//#include<stdio.h>
+//#include<math.h>
+//#include<stdio.h>
+//#include<windows.h > 
+//#include<math.h >
+//
+//int main()
+//{
+//	int i, j;
+//	int x = 0;
+//	int y = 5;
+//	int velocity_x = 1;
+//	int velocity_y = 1;
+//	int left = 0;
+//	int right = 35;
+//	int top = 0;
+//	int bottom = 12;
+//	while (1)
+//	{
+//		x = x + velocity_x;
+//		y = y + velocity_y;
+//		system(" ");
+//		for (i = 0; i < x; i++)
+//			printf("姓名:女神\n\n\n我想对你说:\n\n");
+//		for (j = 0; j < y; j++)
+//			printf(" ");
+//		sleep(2000099);
+//		printf("从我见到你的那一刻\n\n\n");
+//		sleep(2000099);
+//		printf("就已下定守护你\n\n\n");
+//		printf("\033[?25l");
+//		sleep(2000099);
+//		printf(" 你很好\n\n");
+//		sleep(2000099);
+//		printf("让我震撼\n\n\n");
+//		sleep(2000099);
+//		printf("为了你\n\n\n");
+//		sleep(2000099);
+//		printf("可以不顾一切\n\n\n");
+//		sleep(2000099);
+//		printf(" l like you\n\n\n");
+//		sleep(2000099);
+//		printf("because you very kindness\n\n\n");
+//		sleep(2000099);
+//		printf(" l want to be with you\n\n\n");
+//		sleep(2000099);
+//		printf(" No matter what the final outcome may be, I will always protect you\n\n\n\n");
+//		return 0;
+//		if ((x == top) || (x == bottom))
+//			velocity_x = -velocity_x;
+//		if ((y == left) || (y == right))
+//			velocity_y = -velocity_y;
+//	}
+//}
 
 //#include<stdio.h>
 //#include<math.h>
@@ -163,23 +262,24 @@
 //	printf("23200116320周刘荣");
 //	return 0;
 //}
-//#define _CRT_SECURE_NO_WARNINGS
-//#include<stdio.h>
-//#include<math.h>
-////int main()
-//{
-//	double n, t, s=0, x;
-//	scanf("%lf",&x);
-//	t = x;
-//	for (n = 1; fabs(t) >= 1e-7; n = n + 2)
-//	{
-//		t = t * (-x * x) / ((n - 1) * n);
-//		s += t;
-//	}
-//	printf("%lf\n", s);
-//	printf("23200116320周刘荣");
-//	return;
-//}
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<math.h>
+int main()
+
+{
+	double n, t, s=0, x;
+	scanf("%lf",&x);
+	t = x;
+	for (n = 1; fabs(t) >= 1e-7; n = n + 2)
+	{
+		t = t * (-x * x) / ((n - 1) * n);
+		s += t;
+	}
+	printf("%lf\n", s);
+	printf("23200116320周刘荣");
+	return;
+}
 
 
 
