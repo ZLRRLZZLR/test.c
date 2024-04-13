@@ -1,7 +1,17 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
-
-
+int main()
+{
+	int a = 10;
+	int* p = &a;
+	printf("%d\n", ++(*p));
+	printf("%d\n", a);
+	printf("%d\n", (*p)++);
+	printf("%d\n", ++ * p);
+	printf("%d\n", *p++);
+	printf("%d\n", *(p++));
+	return 0;
+}
 
 
 
@@ -262,27 +272,24 @@
 //	printf("23200116320÷‹¡ı»Ÿ");
 //	return 0;
 //}
-#define _CRT_SECURE_NO_WARNINGS
-#include<stdio.h>
-#include<math.h>
-int main()
-
-{
-	double n, t, s=0, x;
-	scanf("%lf",&x);
-	t = x;
-	for (n = 1; fabs(t) >= 1e-7; n = n + 2)
-	{
-		t = t * (-x * x) / ((n - 1) * n);
-		s += t;
-	}
-	printf("%lf\n", s);
-	printf("23200116320÷‹¡ı»Ÿ");
-	return;
-}
-
-
-
+//#define _CRT_SECURE_NO_WARNINGS
+//#include<stdio.h>
+//#include<math.h>
+//int main()
+//
+//{
+//	double n, t, s=0, x;
+//	scanf("%lf",&x);
+//	t = x;
+//	for (n = 1; fabs(t) >= 1e-7; n = n + 2)
+//	{
+//		t = t * (-x * x) / ((n - 1) * n);
+//		s += t;
+//	}
+//	printf("%lf\n", s);
+//	printf("23200116320÷‹¡ı»Ÿ");
+//	return;
+//}
 
 //int main()
 //{
