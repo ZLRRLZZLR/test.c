@@ -39,17 +39,17 @@ void LTPrint(LTNode* phead)
 }
 
 //≥ı ºªØ
-//void LTInit(LTNode** pphead)
-//{
-//	assert(pphead);
-//	*pphead = LTBuyNode(-1);
-//}
-LTNode* LTInit()
+void LTInit(LTNode** pphead)
 {
-
-	LTNode*phead = LTBuyNode(-1);
-	return phead;
+	assert(pphead);
+	*pphead = LTBuyNode(-1);
 }
+//LTNode* LTInit()
+//{
+//
+//	LTNode*phead = LTBuyNode(-1);
+//	return phead;
+//}
 
 
 //Œ≤≤Â

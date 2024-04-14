@@ -22,8 +22,8 @@ LTNode* LTBuyNode(LTDataType x);
 void LTPrint(LTNode* phead);
 
 //³õÊ¼»¯
-//void LTInit(LTNode** pphead);
-LTNode* LTInit();
+void LTInit(LTNode** pphead);
+//LTNode* LTInit();
 
 //Ïú»Ù
 void LTDestroy(LTNode* phead);
