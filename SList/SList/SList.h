@@ -7,11 +7,16 @@ typedef int SLTDataType;
 
 typedef struct SListNode
 {
+
 	SLTDataType data;
 	struct SListNode* next;
+
 }SLTNode;
 
+//申请空间
+SLTNode* SLTBuyNode(SLTDataType x);
 
+//打印
 void SLTPrint(SLTNode* phead);
 
 //头部插入删除/尾部插入删除
