@@ -1,18 +1,229 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
+
 int main()
 {
-	int a = 10;
-	int* p = &a;
-	printf("%d\n", ++(*p));
-	printf("%d\n", a);
-	printf("%d\n", (*p)++);
-	printf("%d\n", ++ * p);
-	printf("%d\n", *p++);
-	printf("%d\n", *(p++));
+	int arr[10] = { 1,2,4,5 }, i = 0, num = 0, t = 0;
+	scanf("%d", &num);
+	for (; i < 10; i++)
+	{
+		if (num <= arr[i])
+		{
+			t = i;
+			break;
+		}
+	}
+	while (arr[i++]);
+	i--;
+	for (; i >= t; i--)
+	{
+		arr[i + 1] = arr[i];
+	}
+	arr[t] = num;
+	for (i = 0; i < 10; i++)
+	{
+		printf("%d ", arr[i]);
+	}
+	printf("\n");
+	printf("23200116320周刘荣");
 	return 0;
 }
 
+//int main()
+//{
+//	int i = 0, j = 0;
+//	int a[3][3] = { 0 };
+//	int b[3][3] = { 0 };
+//	int c[3][3] = { 0 };
+//	for (i = 0; i < 3; i++)
+//	{
+//		for (j = 0; j < 3; j++)
+//		{
+//			scanf("%d",&a[i][j]);
+//		}
+//	}
+//	for (i = 0; i < 3; i++)
+//	{
+//		for (j = 0; j < 3; j++)
+//		{
+//			scanf("%d", &b[i][j]);
+//		}
+//	}
+//	for (i = 0; i < 3; i++)
+//	{
+//		for (j = 0; j < 3; j++)
+//		{
+//			c[i][j] = a[i][j] + b[i][j];
+//		}
+//	}
+//	for (i = 0; i < 3; i++)
+//	{
+//		for (j = 0; j < 3; j++)
+//		{
+//			printf("%d ",c[i][j]);
+//		}
+//		printf("\n");
+//	}
+//	printf("23200116320周刘荣");
+//	return 0;
+//}
+
+
+
+
+//int main()
+//{
+//	int arr[10] = { 0 }, i = 0, s = 0,t = 0;
+//	for (i = 0; i < 10; i++)
+//	{
+//		scanf("%d", &arr[i]);
+//	}
+//	for (i = 0; i < 10; i++)
+//	{
+//		printf("%d ", arr[i]);
+//	}
+//	printf("\n");
+//	for (i = 0; i < 5; i++)
+//	{
+//		t = arr[i];
+//		arr[i] = arr[9 - i];
+//		arr[9 - i] = t;
+//	}
+//	for (i = 0; i < 10; i++)
+//	{
+//		printf("%d ", arr[i]);
+//	}
+//	printf("\n");
+//	printf("23200116320周刘荣");
+//	return 0;
+//}
+
+//int main()
+//{
+//	int arr[10] = { 0 },i = 0,s = 0;
+//	for (i = 0; i < 10; i++)
+//	{
+//		scanf("%d", &arr[i]);
+//		s += arr[i];
+//	}
+//	printf("%d\n",s);
+//    printf("23200116320周刘荣");
+//	return 0;
+//}
+
+
+//#include<stdio.h>
+//
+//int main()
+//{
+//
+//	int i, j, max, min;
+//	int max_row = 0, max_col = 0, min_row = 0, min_col = 0;
+//	int a[3][4] = { {12,23,34,5},{45,32,56,6},{9,16,34,21} };
+//	for (int i = 0; i < 3; i++)
+//	{
+//		for (j = 0; j < 4; j++)
+//			printf("%4d",a[i][j]);
+//		printf("\n");
+//	}
+//	max = a[0][0];
+//	min = a[0][0];
+//	printf("\n");
+//	for(i = 0;i < 3;i++)
+//		for (j = 0; j < 4; j++)
+//		{
+//			if (a[i][j] > max)
+//			{
+//				max = a[i][j]; max_row = i; max_col = j;
+//			}
+//			if (a[i][j] < max)
+//			{
+//				min = a[i][j]; min_row = i; min_col = j;
+//			}
+//		}
+//			printf("The max number is:a[%d][%d]: %d\n", max_row, max_col,max);
+//			printf("The min number is:a[%d][%d]: %d\n", min_row, min_col, min);
+//	printf("23200116320周刘荣");
+//	return 0;
+//}
+
+
+
+
+
+//int main()
+//{
+//	int a = 10;
+//	int* p = &a;
+//	printf("%d\n", ++(*p));
+//	printf("%d\n", a);
+//	printf("%d\n", (*p)++);
+//	printf("%d\n", ++ * p);
+//	printf("%d\n", *p++);
+//	printf("%d\n", *(p++));
+//	return 0;
+//}
+
+
+
+//
+//#include<stdio.h>
+//
+//int main()
+//{
+//	int a[10] = { 1,3,6,0,12,9,7,15,10,20 };
+//	int n, i;
+//	printf("请输入要查找的数据：");
+//	scanf("%d", &n);
+//	for (i = 0; i < 10; i++)
+//		if (a[i] == n)
+//		{
+//			printf("元素%d的下标为%d\n", n, i);
+//			break;
+//		}
+//	if (i >= 10)
+//		printf("无此元素");
+//	printf("23200116320周刘荣");
+//	return 0;
+//}
+
+
+//#include<stdio.h>
+//
+//int main()
+//{
+//	int i, max, max_i, a[10];
+//	for (i = 0; i < 10; i++)
+//		scanf("%d", &a[i]);
+//	max = a[0];
+//	max_i = 0;
+//	for (i = 1; i < 10; i++)
+//		if (a[i] > max)
+//		{
+//			max = a[i];
+//			max_i = i;
+//		}
+//	printf("The Max Number is a[%d]=%d\n", max_i, max);
+//	printf("23200116320周刘荣");
+//	return 0;
+//}
+
+//#include<stdio.h>
+//
+//int main()
+//{
+//	int f[20] = { 1,1 }, i;
+//	for (i = 2; i < 20; i++)
+//		f[i] = f[i - 1] + f[i - 2];
+//	printf("\n---------------------Fibonacci---------------------\n");
+//	for (i = 0; i < 20; i++)
+//	{
+//		printf("f[%2d]=%-6d", i, f[i]);
+//		if ((i + 1) % 5 == 0)printf("\n");
+//	}
+//	printf("23200116320周刘荣");
+//	return 0;
+//}
 
 
 ////移除元素
