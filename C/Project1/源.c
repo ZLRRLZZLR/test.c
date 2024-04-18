@@ -1,33 +1,301 @@
 #define _CRT_SECURE_NO_WARNINGS
-#include<stdio.h>
 
-int main()
-{
-	int arr[10] = { 1,2,4,5 }, i = 0, num = 0, t = 0;
-	scanf("%d", &num);
-	for (; i < 10; i++)
-	{
-		if (num <= arr[i])
-		{
-			t = i;
-			break;
-		}
-	}
-	while (arr[i++]);
-	i--;
-	for (; i >= t; i--)
-	{
-		arr[i + 1] = arr[i];
-	}
-	arr[t] = num;
-	for (i = 0; i < 10; i++)
-	{
-		printf("%d ", arr[i]);
-	}
-	printf("\n");
-	printf("23200116320周刘荣");
-	return 0;
-}
+
+///**//合并两个有序链表
+// * Definition for singly-linked list.
+// * struct ListNode {
+// *     int val;
+// *     struct ListNode *next;
+// * };
+// */
+//typedef struct ListNode ListNode;
+//struct ListNode* mergeTwoLists(struct ListNode* list1, struct ListNode* list2) {
+//	if (list1 == NULL)
+//		return list2;
+//	if (list2 == NULL)
+//		return list1;
+//	ListNode* l1 = list1;
+//	ListNode* l2 = list2;
+//	ListNode* newhead = NULL, * newtail = NULL;
+//	while (l1 && l2)
+//	{
+//		if (l1->val < l2->val)
+//		{
+//			if (newhead == NULL)
+//			{
+//				newhead = newtail = l1;
+//			}
+//			else
+//			{
+//				newtail->next = l1;
+//				newtail = newtail->next;
+//			}
+//			l1 = l1->next;
+//		}
+//		else
+//		{
+//			if (newhead == NULL)
+//			{
+//				newhead = newtail = l2;
+//			}
+//			else
+//			{
+//				newtail->next = l2;
+//				newtail = newtail->next;
+//			}
+//			l2 = l2->next;
+//		}
+//	}
+//	if (l1 == NULL)
+//	{
+//		newtail->next = l2;
+//
+//
+//	}
+//	if (l2 == NULL)
+//	{
+//		newtail->next = l1;
+//
+//
+//	}
+//	return newhead;
+//}
+
+
+//约瑟夫问题环形链表
+///**
+// * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
+// *
+// *
+// * @param n int整型
+// * @param m int整型
+// * @return int整型
+// */
+//typedef struct ListNode ListNode;
+//ListNode* buynode(int x)
+//{
+//	ListNode* next = (ListNode*)malloc(sizeof(ListNode));
+//	if (NULL == next)
+//	{
+//		exit(1);
+//	}
+//	next->val = x;
+//	next->next = NULL;
+//	return next;
+//}
+//ListNode* creatcricle(int n)
+//{
+//	ListNode* phead = buynode(1);
+//	ListNode* pcur = phead;
+//	for (int i = 2; i <= n; i++)
+//	{
+//		pcur->next = buynode(i);
+//		pcur = pcur->next;
+//	}
+//	pcur->next = phead;
+//	return pcur;
+//}
+//
+//int ysf(int n, int m) {
+//	ListNode* prev = creatcricle(n);
+//	ListNode* pcur = prev->next;
+//	int count = 1;
+//	while (pcur->next != pcur)
+//	{
+//		if (m == count)
+//		{
+//			prev->next = pcur->next;
+//			free(pcur);
+//			pcur = prev->next;
+//			count = 1;
+//		}
+//		else
+//		{
+//			prev = pcur;
+//			pcur = pcur->next;
+//			count++;
+//		}
+//
+//	}
+//	return pcur->val;
+//}
+
+//#include<iostream>
+//using namespace std;
+//int main() {
+//	char arr[1000000];
+//	cout << "please input" << endl;
+//	cin >> arr;
+//	char temp[8];
+//	int n, sum1 = 0;
+//	cin >> n;
+//	for (int i = 0; i < n; i++) {
+//		cin >> temp;
+//		char temp1[8][2];
+//		for (int k = 0; k < 8; k++) {
+//			temp1[k][0] = temp[k];
+//			temp1[k][1] = '0';
+//		}
+//		int j = 0;
+//		while (arr[j + 7] != '\0') {
+//			int sum = 0;
+//			for (int k = 0; k < 8; k++) {
+//
+//				temp1[k][1] = '0';
+//			}
+//			for (int k = 0; k < 8; k++) {
+//				for (int q = 0; q < 8; q++) {
+//					if (arr[j + k] == temp1[q][0] && temp1[q][1] == '0') {
+//						sum++;
+//						temp1[q][1] = '1';
+//						cout << "arr[j+k] j+k=" << j + k << arr[j + k] << "temp1[q][0] q=" << temp1[q][0] << endl;
+//						break;
+//					}
+//				}
+//			}
+//			if (sum == 8) {
+//				sum1++;
+//				cout << "j=" << j << endl;
+//			}
+//			j++;
+//			cout << "count_j=" << j << endl;
+//		}
+//	}
+//	cout << sum1;
+//	return 0;
+//}
+
+//#include<stdio.h>
+//
+//#include <stdio.h>
+//#include <string.h>
+//#define int unsigned long long
+//char kun[1200000], hun[10];
+//int tong[26], base = 113, num[1200000] = { 0 };
+//int n, count = 0;
+//
+//int haxi() {//计算哈希值
+//	int c = 0;
+//	for (int i = 0; i <= 25; i++) {
+//		c = c * base + tong[i];//第一位为最高位
+//	}
+//	return c;
+//}
+//
+//main() {
+//	scanf("%s", &kun);
+//	int h = strlen(kun);
+//	for (int i = 0; i <= h - 8; i++) {
+//		for (int i = 0; i <= 25; i++)
+//			tong[i] = 0;
+//		for (int j = i; j < i + 8; j++)
+//			tong[kun[j] - 'a']++;//相当于桶排序，这样就可以不管顺序
+//		num[i] = haxi();
+//	}
+//	scanf("%llu", &n);
+//	while (n--) {
+//		scanf("%s", hun);//每输入一个密码，就去与原串匹配一次
+//		int l = strlen(hun);
+//		for (int i = 0; i <= 25; i++) {
+//			tong[i] = 0;
+//		}
+//		for (int i = 0; i < l; i++) {
+//			tong[hun[i] - 'a']++;
+//		}
+//		int t = haxi();
+//		for (int i = 0; i <= h - 8; i++) {
+//			if (num[i] == t)
+//				count++;
+//		}
+//	}
+//	printf("%llu", count);
+//	return 0;
+//}
+
+
+//快慢指针寻找中间节点
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+ */
+//typedef struct ListNode ListNode;
+//struct ListNode* middleNode(struct ListNode* head) {
+//	ListNode* slow = head;
+//	ListNode* fast = head;
+//	while (fast && fast->next)
+//	{
+//		slow = slow->next;
+//		fast = fast->next->next;
+//	}
+//	return slow;
+//}
+
+//移除链表元素
+///**
+// * Definition for singly-linked list.
+// * struct ListNode {
+// *     int val;
+// *     struct ListNode *next;
+// * };
+// */
+//typedef struct ListNode ListNode;
+//struct ListNode* removeElements(struct ListNode* head, int val) {
+//	ListNode* pcur = head;
+//	ListNode* newtail, * newhead;
+//	newtail = newhead = NULL;
+//
+//	while (pcur)
+//	{
+//		if (pcur->val != val)
+//		{
+//			if (newhead == NULL)
+//			{
+//				newhead = newtail = pcur;
+//			}
+//			else
+//			{
+//				newtail->next = pcur;
+//				newtail = pcur;
+//			}
+//		}
+//		pcur = pcur->next;
+//	}
+//	if (newhead != NULL)
+//		newtail->next = NULL;
+//	return newhead;
+//}
+
+
+//int main()
+//{
+//	int arr[10] = { 1,2,4,5 }, i = 0, num = 0, t = 0;
+//	scanf("%d", &num);
+//	for (; i < 10; i++)
+//	{
+//		if (num <= arr[i])
+//		{
+//			t = i;
+//			break;
+//		}
+//	}
+//	while (arr[i++]);
+//	i--;
+//	for (; i >= t; i--)
+//	{
+//		arr[i + 1] = arr[i];
+//	}
+//	arr[t] = num;
+//	for (i = 0; i < 10; i++)
+//	{
+//		printf("%d ", arr[i]);
+//	}
+//	printf("\n");
+//	printf("23200116320周刘荣");
+//	return 0;
+//}
 
 //int main()
 //{
