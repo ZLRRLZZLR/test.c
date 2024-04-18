@@ -127,11 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Slist.c" />
     <ClCompile Include="SListcontact.c" />
     <ClCompile Include="SListcontactfunction.c" />
     <ClCompile Include="test1.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Slist.h" />
     <ClInclude Include="SListcontact.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

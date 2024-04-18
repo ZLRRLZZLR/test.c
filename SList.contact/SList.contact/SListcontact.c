@@ -1,207 +1,57 @@
 #include"SListcontact.h"
 
-void SLTPrint(SLTNode* phead)
+void contactmenu()
 {
-	SLTNode* pcur = phead;
-	while (pcur)
-	{
-		printf("%d->", pcur->data);
-		pcur = pcur->next;
-	}
-	printf("NULL\n");
+	puts("***********************");
+	puts("******1.联系人姓名******");
+	puts("******2.联系人性别******");
+	puts("******3.联系人年龄******");
+	puts("******4.联系人电话******");
+	puts("******5.联系人地址******");
+	puts("********0.退出*********");
+	puts("***********************");
 }
 
-SLTNode* SLTBuyNode(SLTDataType x)
-{
-	SLTNode* newnode = (SLTNode*)calloc(1, sizeof(SLTNode));
-	if (NULL == newnode)
-	{
-		perror("calloc failed");
-		exit(1);
-	}
-	newnode->data = x;
-	newnode->next = NULL;
-	return newnode;
-}
 
-//头部插入删除/尾部插入删除
-
-void SLTPushBack(SLTNode** pphead, SLTDataType x)
-{
-	assert(pphead);
-	SLTNode* petail = NULL;
-	if (NULL == *pphead)
-	{
-		*pphead = SLTBuyNode(x);
-	}
-	else
-	{
-		petail = *pphead;
-		while (petail->next)
-		{
-			petail = petail->next;
-		}
-		petail->next = SLTBuyNode(x);
-	}
-}
-
-void SLTPushFront(SLTNode** pphead, SLTDataType x)
-{
-	assert(pphead);
-	SLTNode* newnode = SLTBuyNode(x);
-	if (NULL == *pphead)
-	{
-		*pphead = newnode;
-	}
-	else
-	{
-		newnode->next = *pphead;
-		*pphead = newnode;
-	}
-}
-
-void SLTPopBack(SLTNode** pphead)
-{
-	assert(pphead && *pphead);
-
-	if ((*pphead)->next == NULL)
-	{
-		free(*pphead);
-		*pphead = NULL;
-	}
-	else
-	{
-
-		SLTNode* prev = *pphead;
-		SLTNode* ptail = *pphead;
-		while (ptail->next)
-		{
-			prev = ptail;
-			ptail = ptail->next;
-		}
-		free(ptail);
-		ptail = NULL;
-		prev->next = NULL;
-	}
-}
-
-void SLTPopFront(SLTNode** pphead)
-{
-	assert(pphead && *pphead);
-
-	SLTNode* next = (*pphead)->next;
-	free(*pphead);
-	*pphead = next;
-}
-
-//查找
-SLTNode* SLTFind(SLTNode* phead, SLTDataType x)
-{
-	assert(phead);
-	SLTNode* pcur = phead;
-	while (pcur)
-	{
-		if (pcur->data == x)
-		{
-			return pcur;
-		}
-		pcur = pcur->next;
-	}
-	return NULL;
-}
-
-//在指定位置之前插入数据
-void SLTInsert(SLTNode** pphead, SLTNode* pos, SLTDataType x)
-{
-	assert(pphead && *pphead);
-	assert(pos);
-	SLTNode* newnode = SLTBuyNode(x);
-	SLTNode* pcur = *pphead;
-	if (pos == *pphead)
-	{
-		SLTPushFront(pphead, x);
-	}
-	else
-	{
-		while (pcur->next != pos)
-		{
-			pcur = pcur->next;
-		}
-		newnode->next = pcur->next;
-		pcur->next = newnode;
-	}
-
-}
-
-//在指定位置之后插入数据
-void SLTInsertAfter(SLTNode* pos, SLTDataType x)
-{
-	assert(pos);
-	SLTNode* newnode = SLTBuyNode(x);
-	newnode->next = pos->next;
-	pos->next = newnode;
-
-}
-
-//删除pos节点
-void SLTErase(SLTNode** pphead, SLTNode* pos)
-{
-	assert(pphead && *pphead);
-	assert(pos);
-	SLTNode* pcur = *pphead;
-	if (pos == *pphead)
-	{
-		SLTPopFront(pphead);
-	}
-	else
-	{
-		while (pcur->next != pos)
-		{
-			pcur = pcur->next;
-		}
-		pcur->next = pos->next;
-		free(pos);
-		pos = NULL;
-	}
-}
-
-//删除pos之后的节点
-void SLTEraseAfter(SLTNode* pos)
-{
-	assert(pos && pos->next);
-	SLTNode* pcur = pos->next->next;
-	free(pos->next);
-	pos->next = pcur;
-}
-
-//销毁链表
-void SListDesTroy(SLTNode** pphead)
-{
-	assert(pphead && *pphead);
-	SLTNode* pcur = *pphead;
-	SLTNode* prev = *pphead;
-	while (pcur)
-	{
-		prev = pcur;
-		pcur = pcur->next;
-		free(prev);
-	}
-	*pphead = prev = pcur = NULL;
-}
-
-//根据名字查找
-int FindByName(contact* con, char* Name);
-
-//加载通讯录信息
-void LoadContact(contact* con);
 
 //初始化通讯录
+void InitContact(contact** con)
+{
+	*con = NULL;
+}
 
-void InitContact(contact* con);
 
 //添加通讯录数据
 
-void AddContact(contact* con);
+void AddContact(contact* con)
+{
+	assert(con);
+	int num = 0;
+	puts("请输入要添加的联系人信息");
+	scanf("%d", &num);
+	switch(num)
+	{
+	case 1:
+		scanf("%s", con->data.name);
+		break;
+	case 2:
+		scanf("%s", con->data.sex);
+		break;
+	case 3:
+		scanf("%s", &con->data.age);
+		break;
+	case 4:
+		scanf("%s", con->data.tel);
+		break;
+	case 5:
+		scanf("%s", con->data.addr);
+		break;
+	default:
+		puts("操作结束结束");
+	}
+
+
+}
 
 //删除通讯录数据
 
@@ -222,3 +72,11 @@ void ModifyContact(contact* con);
 //销毁通讯录数据
 
 void DestroyContact(contact* con);
+
+
+//根据名字查找
+int FindByName(contact* con, char* Name);
+
+//加载通讯录信息
+void LoadContact(contact* con);
+
