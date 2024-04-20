@@ -1,5 +1,10 @@
 #define _CRT_SECURE_NO_WARNINGS
 
+//int main()
+//{
+//	printf("你好");
+//	return 0;
+//}
 
 ///**//合并两个有序链表
 // * Definition for singly-linked list.

@@ -35,7 +35,7 @@ SLTNode* SLTBuyNode(SLTDataType x);
 void SLTPrint(SLTNode* phead);
 
 //头部插入删除/尾部插入删除
-void SLTPushBack(SLTNode** pphead);
+SLTNode* SLTPushBack(SLTNode** pphead);
 void SLTPushFront(SLTNode** pphead, SLTDataType x);
 void SLTPopBack(SLTNode** pphead);
 void SLTPopFront(SLTNode** pphead);

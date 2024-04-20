@@ -4,8 +4,10 @@ void test01()
 {
 	contact* con;
 	InitContact(&con);
-	SLTPushBack(&con);
+	AddContact(&con);
+	AddContact(&con);
 
+	AddContact(&con);
 }
 
 

@@ -23,34 +23,20 @@ void InitContact(contact** con)
 
 //添加通讯录数据
 
-void AddContact(contact* con)
+void AddContact(contact** con)
 {
-	assert(con);
-	int num = 0;
-	puts("请输入要添加的联系人信息");
-	scanf("%d", &num);
-	switch(num)
-	{
-	case 1:
-		scanf("%s", con->data.name);
-		break;
-	case 2:
-		scanf("%s", con->data.sex);
-		break;
-	case 3:
-		scanf("%s", &con->data.age);
-		break;
-	case 4:
-		scanf("%s", con->data.tel);
-		break;
-	case 5:
-		scanf("%s", con->data.addr);
-		break;
-	default:
-		puts("操作结束结束");
-	}
-
-
+	contact*  newnode = SLTPushBack();
+	puts("请输入联系人姓名：");
+	scanf("%s", newnode->data.name);
+	puts("请输入联系人性别：");
+	scanf("%s", newnode->data.sex);
+	puts("请输入联系人年龄：");
+	scanf("%d", &(newnode->data.age));
+	puts("请输入联系人电话：");
+	scanf("%s", newnode->data.tel);
+	puts("请输入联系人地址：");
+	scanf("%s", newnode->data.addr);
+	puts("添加操作结束");
 }
 
 //删除通讯录数据

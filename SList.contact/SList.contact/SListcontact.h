@@ -6,6 +6,7 @@
 #include<assert.h>
 //contact.h
 
+void contactmenu();
 
 //初始化通讯录
 void InitContact(contact** con);
