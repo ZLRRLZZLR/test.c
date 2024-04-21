@@ -209,7 +209,7 @@ void ModifyContact(contact* con)
 //保存通讯录
 void SaveContact(contact* con)
 {
-	FILE* pf = fopen("contact.txt", "wb");
+	FILE* pf = fopen("contact.txt", "w");
 	if(NULL == pf)
 	{
 		perror("fopen");
@@ -218,7 +218,7 @@ void SaveContact(contact* con)
 	int i = 0;
 	for(i = 0;i < con->size;i++)
 	{
-		fwrite(con->arr + 1, sizeof(PeoInfo), 1, pf);
+		fwrite(con->arr + i, sizeof(PeoInfo), 1, pf);
 	}
 	puts("通讯录数据保存成功！");
 	fclose(pf);
@@ -230,7 +230,14 @@ void SaveContact(contact* con)
 void DestroyContact(contact* con)
 {
 	assert(con);
-	SaveContact(con);
+	int num = 0;
+	scanf("%d",&num);
+	puts("是否保存历史数据？");
+	puts("0.不是 or 1.是");
+	if (num)
+	{
+		SaveContact(con);
+	}
 	SLDestroy(con);
 	puts("销毁成功！");
 }

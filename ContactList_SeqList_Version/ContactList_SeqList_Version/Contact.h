@@ -9,8 +9,6 @@
 
 typedef struct SeqList contact;
 
-//通讯录修改菜单
-void contactmenu();
 //用户数据
 
 typedef struct PersonInfo
@@ -23,6 +21,9 @@ typedef struct PersonInfo
 
 }PeoInfo;
 
+
+//通讯录修改菜单
+void contactmenu();
 //根据名字查找
 int FindByName(contact* con, char* Name);
 

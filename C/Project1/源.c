@@ -1,5 +1,28 @@
 #define _CRT_SECURE_NO_WARNINGS
 
+
+
+typedef int SLDataType;
+typedef struct SeqList
+{
+	SLDataType* arr;//搭配realloc使用按需申请空间
+	int size;//用来记录目前已存放的有效元素个数
+	int capacity;//空间容量
+}sL;
+
+
+
+//#define M 6
+//
+//typedef int SLDataType;//方便对数组成员类型进行替换
+//                       //以便实现数组存放不同类型
+//
+//typedef struct SeqList
+//{
+//	SLDataType arr[M];//使用定长数组来存放数据
+//	int size;//用来记录目前已存放的有效元素个数
+//}sL;
+
 //int main()
 //{
 //	printf("你好");

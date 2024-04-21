@@ -2,6 +2,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<assert.h>
+
 #define INIT_CAPACITY 4
 #define _CRT_SECURE_NO_WARNINGS
 
@@ -12,7 +13,6 @@ typedef struct SeqList
 	SLDataType* arr;
 	int size;
 	int capacity;
-
 
 }SL;
 

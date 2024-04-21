@@ -8,7 +8,6 @@ void SLInit(SL* ps)
 	ps->arr = NULL;
 	ps->size = ps->capacity = 0;
 
-
 }
 //Ïú»Ù
 void SLDestroy(SL* ps)
@@ -17,8 +16,6 @@ void SLDestroy(SL* ps)
 	free(ps->arr);
 	ps->arr = NULL;
 	ps->size = ps->capacity = 0;
-
-
 }
 
 
