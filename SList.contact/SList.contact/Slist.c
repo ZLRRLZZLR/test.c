@@ -27,14 +27,13 @@ SLTNode* SLTBuyNode()
 
 //头部插入删除/尾部插入删除
 
-SLTNode* SLTPushBack(SLTNode** pphead)
+void SLTPushBack(SLTNode** pphead)
 {
 	assert(pphead);
 	SLTNode* petail = NULL;
 	if (NULL == *pphead)
 	{
 		*pphead = SLTBuyNode();
-		return *pphead;
 	}
 	else
 	{
@@ -44,7 +43,6 @@ SLTNode* SLTPushBack(SLTNode** pphead)
 			petail = petail->next;
 		}
 		petail->next = SLTBuyNode();
-		return petail->next;
 	}
 	
 }

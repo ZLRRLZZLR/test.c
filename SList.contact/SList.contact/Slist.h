@@ -29,13 +29,13 @@ typedef struct SListNode
 
 
 //申请空间
-SLTNode* SLTBuyNode(SLTDataType x);
+SLTNode* SLTBuyNode();
 
 //打印
 void SLTPrint(SLTNode* phead);
 
 //头部插入删除/尾部插入删除
-SLTNode* SLTPushBack(SLTNode** pphead);
+void SLTPushBack(SLTNode** pphead);
 void SLTPushFront(SLTNode** pphead, SLTDataType x);
 void SLTPopBack(SLTNode** pphead);
 void SLTPopFront(SLTNode** pphead);

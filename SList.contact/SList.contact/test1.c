@@ -6,7 +6,6 @@ void test01()
 	InitContact(&con);
 	AddContact(&con);
 	AddContact(&con);
-
 	AddContact(&con);
 }
 

@@ -25,7 +25,12 @@ void InitContact(contact** con)
 
 void AddContact(contact** con)
 {
-	contact*  newnode = SLTPushBack();
+    SLTPushBack(&con);
+	contact* newnode = *con;
+	while (newnode->next)
+	{
+		newnode = newnode->next;
+	}
 	puts("请输入联系人姓名：");
 	scanf("%s", newnode->data.name);
 	puts("请输入联系人性别：");
