@@ -1,14 +1,159 @@
 #define _CRT_SECURE_NO_WARNINGS
 
-
-
-typedef int SLDataType;
-typedef struct SeqList
+#include<stdio.h>
+#include<string.h>
+int main()
 {
-	SLDataType* arr;//搭配realloc使用按需申请空间
-	int size;//用来记录目前已存放的有效元素个数
-	int capacity;//空间容量
-}sL;
+	char s1[20] = { '\0' };
+	char s2[20] = { '\0' };
+	char s3[20] = { '\0' };
+	int n, i, j = 0;
+	gets(s1);
+	gets(s2);
+	scanf("%d", &n);
+
+	for (i = 0; i < n-1; i++)
+	{
+		s3[i] = s1[i];
+	}
+	while (s2[j] != '\0')
+	{
+		s3[i++] = s2[j++];
+	}
+	n = n - 1;
+	while (s1[n] != '\0')
+	{
+		s3[i++] = s1[n++];
+	}
+	puts(s3);
+	printf("\n");
+	puts("23200116320周刘荣");
+	return 0;
+
+}
+
+
+
+
+//
+//【源程序代码】
+//#include<stdio.h>
+//#include<string.h>
+//int main()
+//{
+//	char str[20] = { '\0' };
+//	char newstr[20] = { '\0' };
+//	int i = 0, j = 0;
+//	char a;
+//	gets(str);
+//	scanf("%c", &a);
+//	while (str[i] != '\0')
+//	{
+//		if (str[i] != a)
+//		{
+//			newstr[j++] = str[i++];
+//		}
+//		i++;
+//	}
+//	i = 0;
+//	while (newstr[i] != '\0')
+//	{
+//		printf("%c", newstr[i]);
+//		i++;
+//	}
+//	printf("\n");
+//	puts("23200116320周刘荣");
+//	return 0;
+//
+//}
+
+
+
+//
+//
+//#include<stdio.h>
+//#include<string.h>
+//int main()
+//{
+//	char str1[20];
+//	char str2[20];
+//	int i = 0, j = 0;
+//	gets(str1);
+//	gets(str2);
+//	while (str1[i] != '\0')i++;
+//	while (str1[j] != '\0')
+//	{
+//		str1[i++] = str2[j++];
+//	}
+//	puts(str1);
+//	puts("23200116320周刘荣");
+//	return 0;
+//
+//}
+
+
+
+//
+//#include<stdio.h>
+//#include<string.h>
+//int main()
+//{
+//	char st[20], cs[5][20];//创建
+//	int i, j, p;
+//	puts("please input country's name :");
+//	for (i = 0; i < 5; i++)
+//		gets(cs[i]);//循环输入5个国家名
+//	printf("\n");
+//	printf("\n the country's name is sorted\n");
+//	for (i = 0; i < 5; i++)
+//	{
+//		p = i;
+//		for (j = i + 1; j < 5; j++)
+//			if (strcmp(cs[j], cs[i]) < 0)p = j;//比较国家名字母大小
+//		if (p != i)//将国家名按照字母大小排序，名字小的放在前面
+//		{
+//			strcpy(st, cs[i]);
+//			strcpy(cs[i], cs[p]);
+//			strcpy(cs[p], st);
+//		}
+//		puts(cs[i]);//打印国家名
+//	}
+//	puts("23200116320周刘荣");
+//	return 0;
+//
+//}
+
+
+//#include<stdio.h>
+//
+//int main()
+//{
+//	char string[81];//存放字符串
+//	int i, num = 0, word = 0;
+//	char c;
+//	gets(string);//输入字符串
+//	for (i = 0; (c = string[i]) != '\0'; i++)//循环判断每个数组元素
+//		if (c == ' ')word = 0;//该判断元素为空格，word赋值为0
+//		else//该元素不为空格
+//		{
+//			word = 1;//word赋值为1
+//			num++;//统计的字符数+1
+//		}
+//	printf("There are %d word in line.\n", num);//打印总字符数
+//	puts("23200116320周刘荣");
+//	return 0;
+//
+//}
+
+
+
+//typedef int SLDataType;
+//typedef struct SeqList
+//{
+//	SLDataType* arr;//搭配realloc使用按需申请空间
+//	int size;//用来记录目前已存放的有效元素个数
+//	int capacity;//空间容量
+//}sL;
 
 
 
