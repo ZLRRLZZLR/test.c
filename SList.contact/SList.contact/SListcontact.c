@@ -25,7 +25,7 @@ void InitContact(contact** con)
 
 void AddContact(contact** con)
 {
-    SLTPushBack(&con);
+    SLTPushBack(con);
 	contact* newnode = *con;
 	while (newnode->next)
 	{

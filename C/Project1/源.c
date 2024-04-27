@@ -1,36 +1,190 @@
 #define _CRT_SECURE_NO_WARNINGS
-
 #include<stdio.h>
 #include<string.h>
-int main()
-{
-	char s1[20] = { '\0' };
-	char s2[20] = { '\0' };
-	char s3[20] = { '\0' };
-	int n, i, j = 0;
-	gets(s1);
-	gets(s2);
-	scanf("%d", &n);
 
-	for (i = 0; i < n-1; i++)
-	{
-		s3[i] = s1[i];
-	}
-	while (s2[j] != '\0')
-	{
-		s3[i++] = s2[j++];
-	}
-	n = n - 1;
-	while (s1[n] != '\0')
-	{
-		s3[i++] = s1[n++];
-	}
-	puts(s3);
-	printf("\n");
-	puts("23200116320周刘荣");
-	return 0;
 
-}
+
+
+//相交链表
+///**
+// * Definition for singly-linked list.
+// * struct ListNode {
+// *     int val;
+// *     struct ListNode *next;
+// * };
+// */
+//struct ListNode* getIntersectionNode(struct ListNode* headA, struct ListNode* headB) {
+//	int len1 = 0, len2 = 0;
+//	struct ListNode* HeadA = headA, * HeadB = headB;
+//	while (HeadA)
+//	{
+//		HeadA = HeadA->next;
+//		len1++;
+//	}
+//	while (HeadB)
+//	{
+//		HeadB = HeadB->next;
+//		len2++;
+//	}
+//	int gap = abs(len1 - len2);
+//	struct ListNode* longer = headA, * shoter = headB;
+//	if (len2 > len1)
+//	{
+//		longer = headB;
+//		shoter = headA;
+//	}
+//	while (gap--)
+//	{
+//		longer = longer->next;
+//	}
+//	while (longer && shoter)
+//	{
+//		if (longer == shoter)
+//		{
+//			return longer;
+//		}
+//		longer = longer->next;
+//		shoter = shoter->next;
+//	}
+//	return NULL;
+//}
+
+//链表的回文结构
+///*
+//struct ListNode {
+//	int val;
+//	struct ListNode *next;
+//	ListNode(int x) : val(x), next(NULL) {}
+//};*/
+//ListNode* Mid(ListNode* head)
+//{
+//	struct ListNode* slow = head, * fast = head;
+//	while (fast && fast->next)
+//	{
+//		slow = slow->next;
+//		fast = fast->next->next;
+//	}
+//	return slow;
+//}
+//ListNode* Reverse(ListNode* head)
+//{
+//	struct ListNode* cur = head, * newhead = NULL;
+//	while (cur)
+//	{
+//		struct ListNode* n = cur->next;
+//		cur->next = newhead;
+//		newhead = cur;
+//		cur = n;
+//	}
+//	return newhead;
+//
+//}
+//class PalindromeList {
+//public:
+//	bool chkPalindrome(ListNode* A) {
+//		struct ListNode* mid = Mid(A);
+//		struct ListNode* Newhead = Reverse(mid);
+//		while (A && Newhead)
+//		{
+//			if (A->val != Newhead->val)
+//			{
+//				return false;
+//			}
+//			A = A->next;
+//			Newhead = Newhead->next;
+//		}
+//		return true;
+//	}
+//};
+
+//实现一种算法，找出单向链表中倒数第 k 个节点。返回该节点的值。
+//int kthToLast(struct ListNode* head, int k) {
+//	struct ListNode* slow = head, * fast = head;
+//	while (k--)
+//	{
+//		fast = fast->next;
+//	}
+//	while (fast)
+//	{
+//		fast = fast->next;
+//		slow = slow->next;
+//	}
+//	return slow->val;
+//}
+//数组nums包含从0到n的所有整数，但其中缺了一个。请编写代码找出那个缺失的整数。
+//int missingNumber(int* nums, int numsSize) {
+//	int num = 0;
+//	for (int i = 0; i <= numsSize; i++)
+//	{
+//		num ^= i;
+//	}
+//	for (int i = 0; i < numsSize; i++)
+//	{
+//		num ^= nums[i];
+//	}
+//	return num;
+//}
+
+////轮转数组：开辟新数组
+//void rotate(int* nums, int numsSize, int k) {
+//	int* arr = (int*)malloc(numsSize * sizeof(int));
+//	k %= numsSize;
+//	memcpy(arr, nums + numsSize - k, k * sizeof(int));
+//	memcpy(arr + k, nums, (numsSize - k) * sizeof(int));
+//	memcpy(nums, arr, numsSize * sizeof(int));
+//	free(arr);
+//	arr = NULL;
+//}
+////轮转数组：三段逆置
+//void Inverse(int* nums, int left, int right)
+//{
+//	while (left <= right)
+//	{
+//		int temp = nums[left];
+//		nums[left] = nums[right];
+//		nums[right] = temp;
+//		left++;
+//		right--;
+//	}
+//}
+//
+//void rotate(int* nums, int numsSize, int k) {
+//	k %= numsSize;
+//	Inverse(nums, numsSize - k, numsSize - 1);
+//	Inverse(nums, 0, numsSize - k - 1);
+//	Inverse(nums, 0, numsSize - 1);
+//
+//}
+
+//int main()
+//{
+//	char s1[20] = { '\0' };
+//	char s2[20] = { '\0' };
+//	char s3[20] = { '\0' };
+//	int n, i, j = 0;
+//	gets(s1);
+//	gets(s2);
+//	scanf("%d", &n);
+//
+//	for (i = 0; i < n-1; i++)
+//	{
+//		s3[i] = s1[i];
+//	}
+//	while (s2[j] != '\0')
+//	{
+//		s3[i++] = s2[j++];
+//	}
+//	n = n - 1;
+//	while (s1[n] != '\0')
+//	{
+//		s3[i++] = s1[n++];
+//	}
+//	puts(s3);
+//	printf("\n");
+//	puts("23200116320周刘荣");
+//	return 0;
+//
+//}
 
 
 
