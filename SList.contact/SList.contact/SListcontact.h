@@ -4,10 +4,14 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<assert.h>
+#include<string.h>
+//#include"vld.h"
 //contact.h
 
+void menu();
 void contactmenu();
-
+//根据名字查找
+SLTNode* FindByName(SLTNode* phead, char* Name);
 //初始化通讯录
 void InitContact(contact** con);
 

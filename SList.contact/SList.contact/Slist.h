@@ -21,7 +21,6 @@ typedef PeoInfo SLTDataType;
 
 typedef struct SListNode
 {
-	int val;
 	SLTDataType data;
 	struct SListNode* next;
 
@@ -31,17 +30,13 @@ typedef struct SListNode
 //申请空间
 SLTNode* SLTBuyNode();
 
-//打印
-void SLTPrint(SLTNode* phead);
-
 //头部插入删除/尾部插入删除
 void SLTPushBack(SLTNode** pphead);
 void SLTPushFront(SLTNode** pphead, SLTDataType x);
 void SLTPopBack(SLTNode** pphead);
 void SLTPopFront(SLTNode** pphead);
 
-//查找
-SLTNode* SLTFind(SLTNode* phead, SLTDataType x);
+
 //在指定位置之前插入数据
 void SLTInsert(SLTNode** pphead, SLTNode* pos, SLTDataType x);
 //删除pos节点
