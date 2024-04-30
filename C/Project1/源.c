@@ -3,6 +3,210 @@
 #include<string.h>
 
 
+
+
+//int fn(int x)
+//{
+//	int i = 0;
+//	int s = 0;
+//	for (i = 1; i <= x; i++)
+//	{
+//		s += i;
+//	}
+//	return s;
+//}
+//
+//int f1(int n)
+//{
+//	int i = 0;
+//	int s = 1;
+//	for (i = 1; i <= fn(n); i++)
+//	{
+//		s *= i;
+//	}
+//	return s;
+//}
+//
+//int main()
+//{
+//	int i, n;
+//	int s = 0;
+//	scanf("%d", &n);
+//	for (i = 1; i <= n; i++)
+//	{
+//		s = s + f1(i);
+//	}
+//	printf("\ns=%d\n", s);
+//	puts("23200116320周刘荣");
+//	return 0;
+//}
+
+
+//int fun(int x, int y)
+//{
+//	//******填入函数内部程序段*********
+//	int k = 0;
+//	k = x % 10 * 1000 + x / 10 * 100 + y % 10 * 10 + y / 10;
+//	return k;
+//}
+//
+//int main()
+//{
+//	int a, b, c;
+//	printf("please input a and b:");
+//	//********以下输入a和b两个数*******
+//	scanf("%d%d",&a,&b);
+//	//*********************************
+//	printf("a=%d,b=%d\n", a, b);
+//	//**********以下填入函数调用语句*********
+//	c = fun(a, b);
+//	//*********************************
+//	printf("c=%d\n", c);
+//	puts("23200116320周刘荣");
+//	return 0;
+//}
+//
+
+//void fuc()
+//{
+//	int i = 0;
+//	int j = 0;
+//
+//	for(i = 1;i <= 1000;i++)
+//	{
+//		int sum = 0;
+//		for (j = 1; j < i; j++)
+//		{
+//			if (i % j == 0)
+//			{
+//				sum += j;
+//			}
+//		}
+//		if(sum == i)
+//		{
+//			printf("%d\n", i);
+//		}
+//	}
+//}
+//
+//
+//int main()
+//{
+//	fuc();
+//	puts("23200116320周刘荣");
+//	return 0;
+//}
+//
+//int PN(int i)
+//{
+//	int j = 0;
+//	int flge = 0;
+//		for (j = 2; j < i; j++)
+//		{
+//			if (i % j == 0)
+//			{
+//				flge = 1;
+//				break;
+//			}
+//		}
+//		if (flge == 0)
+//		{
+//			return 1;
+//		}
+//		else
+//		{
+//			return 0;
+//		}
+//}
+//void func()
+//{
+//	int i = 0;
+//	printf("%d\n",3);
+//	for(i = 5 ;i < 100;i += 2)
+//	{
+//		if(PN(i)  && PN(i+2))
+//		{
+//			printf("%d\n%d\n",i,i+2);
+//		}
+//	}
+//}
+//
+//int main()
+//{
+//	func();
+//	puts("23200116320周刘荣");
+//	return 0;
+//}
+
+
+//int Hcf(int a,int b)
+//{
+//	int i = 0;
+//	int k = 0;
+//	for (i = 1;i<= a || i <= b; i++)
+//	{
+//
+//		if(a % i == 0&& b % i == 0)
+//		{
+//			k = k < i ? i : k;
+//		}
+//	}
+//	return k;
+//}
+//
+//int main()
+//{
+//	int a, b;
+//	scanf("%d%d",&a,&b);
+//	printf("%d\n",Hcf(a, b));
+//	puts("23200116320周刘荣");
+//	return 0;
+//}
+
+//
+//#include<stdio.h>
+//
+//void swap(int x, int y)
+//{
+//	int temp;
+//	temp = x;
+//	x = y;
+//	y = temp;
+//}
+//
+//int main()
+//{
+//	int a, b;
+//	scanf("%d%d", &a, &b);
+//	puts("before swap:");
+//	printf("a=%d,b=%d\n", a, b);
+//	swap(a, b);
+//	puts("after swap:");
+//	printf("a=%d,b=%d\n", a, b);
+//	puts("23200116320周刘荣");
+//	return 0;
+//}
+
+//#include<stdio.h>
+//
+//int max(int x, int y);//函数声明，函数定义在主函数之前不用声明
+//
+//int main()
+//{
+//	int a, b, c;
+//	scanf("%d%d", &a, &b);
+//	c = max(a, b);
+//	printf("max=%d\n", c);
+//	puts("23200116320周刘荣");
+//	return 0;
+//}
+//int max(int x, int y)
+//{
+//	int z;
+//	z = x > y ? x : y;
+//	return z;
+//}
+
 //打印1到最大的n位数
 //描述
 //输入数字 n，按顺序打印出从 1 到最大的 n 位十进制数。比如输入 3，则打印出 1、2、3 一直到最大的 3 位数 999。
