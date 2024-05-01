@@ -4,6 +4,56 @@
 
 
 
+//É¾³ý¹«¹²×Ö·û
+//#include <stdio.h>
+//#include<string.h>
+//
+//
+//int main() {
+//	char arr1[1000];
+//	char arr2[1000];
+//	gets(arr1);
+//	gets(arr2);
+//	int i = 0;
+//	while (arr1[i] != '\0')
+//	{
+//		if (strchr(arr2, arr1[i]) == NULL)
+//		{
+//			printf("%c", arr1[i]);
+//		}
+//		i++;
+//	}
+//	return 0;
+//}
+
+//Ìí¼Ó¶ººÅ
+//#include <stdio.h>
+//
+//int main() {
+//	int N;
+//	char arr[14];
+//	while (scanf("%d", &N) != EOF)
+//	{
+//		int i = 0;
+//		int k = 0;
+//		while (N)
+//		{
+//			if (k != 0 && k % 3 == 0)
+//			{
+//				arr[i++] = ',';
+//			}
+//			arr[i++] = N % 10 + '0';
+//			N = N / 10;
+//			k++;
+//		}
+//		for (--i; i >= 0; i--)
+//		{
+//			printf("%c", arr[i]);
+//		}
+//	}
+//	return 0;
+//}
+
 
 //int fn(int x)
 //{
