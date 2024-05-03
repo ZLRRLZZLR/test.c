@@ -5,12 +5,13 @@
 #define FOOD L'бя'
 #define POS_X 24
 #define POS_Y 5
-
+#define KEY_PRESS(VK) (GetAsyncKeyState(VK) & 1 ? 1 : 0)
 #include<stdio.h>
 #include<stdlib.h>
 #include<windows.h>
 #include<locale.h>
 #include<stdbool.h>
+#include<time.h>
 
 enum DIRECTION
 {
@@ -62,4 +63,21 @@ void CreateFood(psnake ps);
 void InitSnake(psnake ps);
 
 void GameRun(psnake ps);
+
+void PrintHelpInfo(psnake ps);
+
+void SnakeMove(psnake ps);
+
+int NextIsFood(psnake ps, pSnakeNode pn);
+
+void EatFood(psnake ps, pSnakeNode pn);
+
+void NotFood(psnake ps, pSnakeNode pn);
+
+void pause();
+
+void KillByWall(psnake ps);
+
+void KillBySelf(psnake ps);
+
 void GameEnd(psnake ps);
