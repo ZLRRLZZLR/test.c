@@ -19,10 +19,10 @@ void test()
 
 }
 
-int main()
-{
-	setlocale(LC_ALL, "");
-	test();
-	SetPos(0, 27);
-	return 0;
-}
+//int main()
+//{
+//	setlocale(LC_ALL, "");
+//	test();
+//	SetPos(0, 27);
+//	return 0;
+//}
