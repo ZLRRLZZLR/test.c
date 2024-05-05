@@ -17,7 +17,6 @@ void test()
 		ch = getchar();
 		while (getchar() != '\n');
 	} while (ch == 'Y'|| ch == 'y');
-
 }
 
 int main()
