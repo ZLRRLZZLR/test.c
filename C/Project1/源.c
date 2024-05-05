@@ -2,8 +2,57 @@
 #include<stdio.h>
 #include<string.h>
 
+///**//环形链表II
+// * Definition for singly-linked list.
+// * struct ListNode {
+// *     int val;
+// *     struct ListNode *next;
+// * };
+// */
+//struct ListNode* detectCycle(struct ListNode* head) {
+//	struct ListNode* slow = head;
+//	struct ListNode* fast = head;
+//	while (fast && fast->next)
+//	{
+//		slow = slow->next;
+//		fast = fast->next->next;
+//		if (fast == slow)
+//		{
+//			struct ListNode* meet = slow;
+//			while (meet != head)
+//			{
+//				meet = meet->next;
+//				head = head->next;
+//			}
+//			return meet;
+//		}
+//	}
+//	return NULL;
+//
+//}
 
-
+//环形链表
+///**
+// * Definition for singly-linked list.
+// * struct ListNode {
+// *     int val;
+// *     struct ListNode *next;
+// * };
+// */
+//bool hasCycle(struct ListNode* head) {
+//	struct ListNode* slow = head;
+//	struct ListNode* fast = head;
+//	while (fast && fast->next)
+//	{
+//		slow = slow->next;
+//		fast = fast->next->next;
+//		if (fast == slow)
+//		{
+//			return true;
+//		}
+//	}
+//	return false;
+//}
 //删除公共字符
 //#include <stdio.h>
 //#include<string.h>
