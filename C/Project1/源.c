@@ -1,7 +1,65 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 #include<string.h>
-
+//
+////随机链表的复制
+///**
+// * Definition for a Node.
+// * struct Node {
+// *     int val;
+// *     struct Node *next;
+// *     struct Node *random;
+// * };
+// */
+//
+//struct Node* copyRandomList(struct Node* head) {
+//	struct Node* cur = head;
+//	while (cur)
+//	{
+//		struct Node* newnode = (struct Node*)malloc(sizeof(struct Node));
+//		newnode->val = cur->val;
+//
+//		newnode->next = cur->next;
+//		cur->next = newnode;
+//
+//		cur = newnode->next;
+//	}
+//	cur = head;
+//
+//	while (cur)
+//	{
+//		struct Node* copy = cur->next;
+//		if (cur->random == NULL)
+//		{
+//			copy->random = cur->random;
+//		}
+//		else
+//		{
+//			copy->random = cur->random->next;
+//		}
+//		cur = copy->next;
+//	}
+//	cur = head;
+//	struct Node* newhead = NULL;
+//	struct Node* newtail = NULL;
+//	while (cur)
+//	{
+//		struct Node* copy = cur->next;
+//		struct Node* next = copy->next;
+//		if (newtail == NULL)
+//		{
+//			newhead = newtail = copy;
+//		}
+//		else
+//		{
+//			newtail->next = copy;
+//			newtail = newtail->next;
+//		}
+//		cur->next = next;
+//		cur = next;
+//	}
+//	return newhead;
+//}
 ///**//环形链表II
 // * Definition for singly-linked list.
 // * struct ListNode {
