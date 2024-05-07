@@ -1,7 +1,175 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 #include<string.h>
+#include <stdio.h>
+#include<string.h>
+
 //
+//#include<stdio.h>
+//#include<string.h>
+//int array_max(int a[])
+//{
+//	int m = a[0];
+//	int i = 0;
+//	int sz = sizeof(a) / sizeof(a[0]);
+//	for (i = 0; i < sz; i++)
+//	{
+//		if (a[i] > m)
+//			m = a[i];
+//	}
+//	return m;
+//}
+//
+//
+//int main()
+//{
+//	int arr[10] = { 5,10,6,7,9,8,4,3,2,1 };
+//	printf("%d\n", array_max(arr));
+//	puts("23200116320周刘荣");
+//	return 0;
+//}
+
+//int count(char str[])，统计一个字符串中包含的数字字符个数。
+//#include<stdio.h>
+//#include<string.h>
+//
+//int count(char str[])
+//{
+//	int i = 0;
+//	int s = 0;
+//	while (str[i] != '\0')
+//	{
+//		if (str[i] >= '0' && str[i] <= '9')
+//		{
+//			s += 1;
+//		}
+//		i++;
+//	}
+//	return s;
+//}
+//int main()
+//{
+//	char str[100] = { 0 };
+//	gets(str);
+//	printf("%d\n", count(str));
+//	puts("23200116320周刘荣");
+//	return 0;
+//}
+
+//
+//求出M行N列二维数组每列元素中的最小值，并计算它们的和值返回主函数，
+//#include<stdio.h>
+//#define M 2
+//#define N 4
+//int SumColumMin(int a[M][N])
+//{
+//	int i, j, k, s = 0;
+//	for (i = 0; i < N; i++)
+//	{
+//		k = 0;
+//		for (j = 1; j < M; j++)
+//			if (a[j][i] > k)k = j;    //记录i列最小值的行标，如何比较最小值
+//		s += i;       //累加i列最小值，注意最小值的表示方法
+//	}
+//	return s;       //将结果返回给调用的函数
+//}
+//int main()
+//{
+//	int x[M][N] = { 3,2,5,1,4,1,8,3 }, s;
+//	s = SumColumMin(x);
+//	printf("%d\n", s);
+//	puts("23200116320周刘荣");
+//	return 0;
+//}
+
+//调用fun函数使其逆序存放，
+// #include<stdio.h>
+//#include<string.h>
+//void fun(char str[])
+//{
+//	char m;
+//	int i, j;
+//	i = 0;
+//	for (j = strlen(str) - 1; i < j; i++, j--)
+//	{
+//		m = str[i];
+//		str[i] = str[j];
+//		str[j] = m;
+//	}
+//}
+//
+//
+//int main()
+//{
+//	char s1[80];
+//	gets(s1);
+//	fun(s1);
+//	puts(s1);
+//	puts("23200116320周刘荣");
+//	return 0;
+//}
+
+//用递归法求n阶勒让德多项式的值，
+//#include<stdio.h>
+//float p(int n, int x);
+//int main()
+//{
+//	int x, n;
+//	printf("please input n and x:");
+//	scanf("%d%d", &n, &x);
+//	printf("n=%d,x=%d\n", n, x);
+//	printf("P%d(%d)=%0.2f\n", n, x, p(n, x));
+//	puts("23200116320周刘荣");
+//	return 0;
+//}
+//float p(int n, int x)\
+//{
+//	if (n == 0)
+//	{
+//		return 1;
+//	}
+//	else if (n == 1)
+//		return x;
+//	else
+//		return ((2 * n - 1) * x * p((n - 1), x) - (n - 1) * p((n - 2), x)) / n;
+//}
+
+//int cpystr(char dest[], char src[], int s, int n)
+//{
+//	/*在这里输入函数程序段*/
+//	int l = 0;
+//	l = strlen(src);
+//	int i = s - 1;
+//	int j = 0;
+//	if (s > l || s < 1 || n <= 0)
+//	{
+//		return 0;
+//	}
+//	else
+//	{
+//		for (i = s - 1; i < l && src[i] != '\0'; i++)
+//		{
+//			dest[j++] = src[i];
+//		}
+//		return 1;
+//	}
+//}
+//
+//int main()
+//{
+//
+//	char a[] = "C Programing Design";
+//	char b[80] = {0};
+//	int res;
+//	res = cpystr(b, a, 3, 17);
+//	if (res > 0)
+//		printf("the copy result is:%s\n", b);
+//	else
+//		printf("Error.\n");
+//	puts("23200116320周刘荣");
+//	return 0;
+//}
+
 ////随机链表的复制
 ///**
 // * Definition for a Node.
