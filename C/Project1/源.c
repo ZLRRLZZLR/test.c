@@ -4,6 +4,74 @@
 #include <stdio.h>
 #include<string.h>
 
+
+//
+//尼科彻斯定理
+////#include <stdio.h>
+//
+//int main() {
+//	int a = 0;
+//	while (scanf("%d", &a) != EOF)
+//	{
+//		int c = a * (a - 1) + 1;
+//		int i = 1;
+//		for (; i < a; i++)
+//		{
+//			printf("%d+", c);
+//			c += 2;
+//		}
+//		if (i == a)
+//			printf("%d", c);
+//
+//	}
+//	return 0;
+//}
+//计算日期到天数转换
+//#include <stdio.h>
+//
+//int main() {
+//	int a, b, c;
+//	int count = 0;
+//	int arr[12] = { 31,28,31,30,31,30,31,31,30,31,30,31 };
+//	while (scanf("%d %d %d", &a, &b, &c) != EOF)
+//	{
+//		if (a % 4 == 0 && a % 100 != 0 || a % 400 == 0)
+//		{
+//			arr[1] = 29;
+//		}
+//		for (int i = 0; i <= b - 2; i++)
+//		{
+//			count += arr[i];
+//		}
+//		count += c;
+//
+//		printf("%d\n", count);
+//	}
+//	return 0;
+//}
+////打印从1到最大的n位数
+///**
+// * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
+// *
+// *
+// * @param n int整型 最大位数
+// * @return int整型一维数组
+// * @return int* returnSize 返回数组行数
+// */
+//static int arr[100000];
+//int* printNumbers(int n, int* returnSize) {
+//	int a = 10;
+//	while (--n)
+//	{
+//		a *= 10;
+//	}
+//	for (int i = 1; i < a; i++)
+//	{
+//		arr[i - 1] = i;
+//	}
+//	*returnSize = a - 1;
+//	return arr;
+//}
 //
 //#include<stdio.h>
 //#include<string.h>
