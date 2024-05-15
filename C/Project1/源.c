@@ -5,6 +5,76 @@
 #include<string.h>
 
 
+
+//记负均正
+//#include <math.h>
+//#include <stdio.h>
+//int main()
+//{
+//	int n = 0;
+//	int arr[2000];
+//	int count1 = 0;
+//	float S = 0;
+//	float a = 0;
+//	while (scanf("%d", &n) != -1)
+//	{
+//		float count2 = n;
+//		for (int i = 0; i <= n - 1; i++)
+//		{
+//			scanf("%d", &arr[i]);
+//		}
+//		for (int i = 0; i <= n - 1; i++)
+//		{
+//
+//			if (arr[i] < 0)
+//			{
+//				count1++;
+//				count2--;
+//
+//			}
+//			else if (arr[i] > 0)
+//			{
+//				S += arr[i];
+//			}
+//			else
+//			{
+//				count2--;
+//			}
+//		}
+//		if (count2 == 0)
+//		{
+//			a = 0.0;
+//		}
+//		else
+//		{
+//			a = S / count2;
+//		}
+//		printf("%d ", count1);
+//		printf("%0.1f", a);
+//	}
+//	return 0;
+//}
+//
+//等差数列
+//#include <stdio.h>
+//
+//int main() {
+//	int a;
+//	while (scanf("%d %d", &a) != EOF)
+//	{
+//		int count = 1;
+//		int Sn = 0;
+//
+//		for (int i = 2; count <= a; i += 3)
+//		{
+//			Sn += i;
+//			count++;
+//		}
+//
+//		printf("%d\n", Sn);
+//	}
+//	return 0;
+//}
 //
 //尼科彻斯定理
 ////#include <stdio.h>
