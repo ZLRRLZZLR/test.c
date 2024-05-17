@@ -3,6 +3,73 @@
 #include<string.h>
 
 
+
+
+////数字颠倒
+//#include <stdio.h>
+//
+//int main()
+//{
+//	char arr[50] = { "\n" };
+//	scanf("%s", &arr);
+//	int sz = strlen(arr);
+//	for (int i = sz - 1; i >= 0; i--)
+//	{
+//		printf("%c", arr[i]);
+//	}
+//
+//	return 0;
+//}
+////完全数统计
+//#include <stdio.h>
+//
+//int main()
+//{
+//	int n = 0;
+//	scanf("%d", &n);
+//	int count2 = 0;
+//	for (int i = 2; i <= n; i++)
+//	{
+//		int count1 = 0;
+//
+//		for (int j = 1; j < i; j++)
+//		{
+//			if (i % j == 0)
+//			{
+//				count1 += j;
+//			}
+//		}
+//		if (count1 == i)
+//		{
+//			count2 += 1;
+//		}
+//	}
+//	printf("%d", count2);
+//
+//	return 0;
+//}
+////字符串个数统计
+//#include <stdio.h>
+//
+//int main()
+//{
+//	char str[501];
+//	int num[128] = { 0 };
+//	int cls = 0;
+//	scanf("%s", &str);
+//	int sz = strlen(str);
+//	for (int i = 0; i <= sz - 1; i++)
+//	{
+//		if (num[(int)str[i]] == 0)
+//		{
+//			num[(int)str[i]] = 1;
+//			cls += 1;
+//		}
+//	}
+//	printf("%d", cls);
+//
+//	return 0;
+//}
 //
 ////#include <stdio.h>
 //#include <string.h>
