@@ -3,8 +3,58 @@
 #include<string.h>
 
 
-
-
+////图片整理
+//#include <stdio.h>
+//#include <string.h>
+//int main()
+//{
+//	char arr[1000];
+//	scanf("%s", &arr);
+//	int sz = strlen(arr);
+//	for (int i = 0; i <= sz - 1; i++)
+//	{
+//		for (int j = 0; j <= sz - 1; j++)
+//		{
+//			int S;
+//			if (arr[i] > arr[j])
+//			{
+//				S = arr[i];
+//				arr[i] = arr[j];
+//				arr[j] = S;
+//			}
+//		}
+//	}
+//	for (int i = sz - 1; i >= 0; i--)
+//	{
+//		printf("%c", arr[i]);
+//	}
+//
+//	return 0;
+//}
+////至少是其他数字两倍的最大数
+//int dominantIndex(int* nums, int numsSize) {
+//	int big = 0;
+//	int small = 0;
+//	for (int i = 0; i < numsSize; i++)
+//	{
+//		if (nums[big] < nums[i])
+//		{
+//			big = i;
+//		}
+//	}
+//	for (int i = 0; i < numsSize; i++)
+//	{
+//		if (i != big)
+//		{
+//			if (nums[big] < 2 * nums[i])
+//			{
+//				return -1;
+//			}
+//		}
+//
+//	}
+//	return big;
+//}
 ////数字颠倒
 //#include <stdio.h>
 //
