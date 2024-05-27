@@ -3,6 +3,67 @@
 #include<string.h>
 
 
+///**自除数
+// * Note: The returned array must be malloced, assume caller calls free().
+// */
+//int* selfDividingNumbers(int left, int right, int* returnSize) {
+//	int k = 0;
+//	int* arr = (int*)malloc(sizeof(int) * (right - left));
+//	for (int i = left; i <= right; i++)
+//	{
+//		int flge = 0;
+//		int b = i;
+//		while (b)
+//		{
+//			if (b % 10 == 0)
+//			{
+//				flge = 1;
+//				break;
+//			}
+//			b = b / 10;
+//		}
+//		int a = i;
+//		int j = a % 10;
+//		while (j != 0)
+//		{
+//			if (i % j != 0)
+//			{
+//				flge = 1;
+//				break;
+//			}
+//			a = a / 10;
+//			j = a % 10;
+//		}
+//		if (flge == 0)
+//		{
+//			arr[k++] = i;
+//		}
+//	}
+//	*returnSize = k;
+//	return arr;
+//}
+//字符个数统计
+//#include <stdio.h>
+//
+//int main()
+//{
+//	char str[501];
+//	int num[128] = { 0 };
+//	int cls = 0;
+//	scanf("%s", &str);
+//	int sz = strlen(str);
+//	for (int i = 0; i <= sz - 1; i++)
+//	{
+//		if (num[(int)str[i]] == 0)
+//		{
+//			num[(int)str[i]] = 1;
+//			cls += 1;
+//		}
+//	}
+//	printf("%d", cls);
+//
+//	return 0;
+//}
 ////图片整理
 //#include <stdio.h>
 //#include <string.h>
