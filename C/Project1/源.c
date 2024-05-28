@@ -2,7 +2,34 @@
 #include<stdio.h>
 #include<string.h>
 
-
+//完全数计算
+//#include <stdio.h>
+//
+//int main()
+//{
+//	int n = 0;
+//	scanf("%d", &n);
+//	int count2 = 0;
+//	for (int i = 2; i <= n; i++)
+//	{
+//		int count1 = 0;
+//
+//		for (int j = 1; j < i; j++)
+//		{
+//			if (i % j == 0)
+//			{
+//				count1 += j;
+//			}
+//		}
+//		if (count1 == i)
+//		{
+//			count2 += 1;
+//		}
+//	}
+//	printf("%d", count2);
+//
+//	return 0;
+//}
 ///**自除数
 // * Note: The returned array must be malloced, assume caller calls free().
 // */
