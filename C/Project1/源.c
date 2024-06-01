@@ -2,6 +2,78 @@
 #include<stdio.h>
 #include<string.h>
 
+
+#include<stdio.h>
+#include<stdlib.h>
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<string.h>
+
+
+#include<stdio.h>
+#include<stdlib.h>
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<string.h>
+
+
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+	char a[] = { "test.txt" };
+	char b[] = { "b.txt" };
+	char ch;
+	FILE* q, * w;
+	q = fopen(a, "r");
+	w = fopen(b, "w");
+	while ((ch = fgetc(q))!= EOF)
+	{
+		if (ch != 0)
+			fputc(ch, w);
+	}
+	fclose(q);
+	fclose(w);
+	return 0;
+}
+
+
+
+//int main()
+//{
+//	char a[50] = { "test.txt" };
+//	char b[50] = { "b.txt" };
+//	char ch;
+//	FILE* q, * w;
+//	q = fopen(a, "r");
+//	w = fopen(b, "w");
+//	while (ch = fgetc(q) != EOF)
+//	{
+//		if (ch != 0)
+//			fputc(ch, w);
+//	}
+//	fclose(q);
+//	fclose(w);
+//	return 0;
+//}
+
+//int main()
+//{
+//	int a = 555555;
+//	int b = 0;
+//	for (int i = 100; i < 999; i++)
+//	{
+//		if (a % i == 0 && i > b)
+//		{
+//			b = i;
+//		}
+//	}
+//	printf("%d",b);
+//	return 0;
+//}
 //完全数计算
 //#include <stdio.h>
 //

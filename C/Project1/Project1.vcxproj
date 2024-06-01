@@ -25,6 +25,10 @@
   <ItemGroup>
     <ClInclude Include="标头.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="b.txt" />
+    <Text Include="test.txt" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
