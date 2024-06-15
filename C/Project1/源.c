@@ -3,42 +3,109 @@
 #include<string.h>
 
 
-#include<stdio.h>
-#include<stdlib.h>
-
-#define _CRT_SECURE_NO_WARNINGS
-#include<stdio.h>
-#include<string.h>
-
-
-#include<stdio.h>
-#include<stdlib.h>
-
-#define _CRT_SECURE_NO_WARNINGS
-#include<stdio.h>
-#include<string.h>
-
-
-#include<stdio.h>
-#include<stdlib.h>
-
-int main()
-{
-	char a[] = { "test.txt" };
-	char b[] = { "b.txt" };
-	char ch;
-	FILE* q, * w;
-	q = fopen(a, "r");
-	w = fopen(b, "w");
-	while ((ch = fgetc(q))!= EOF)
-	{
-		if (ch != 0)
-			fputc(ch, w);
-	}
-	fclose(q);
-	fclose(w);
-	return 0;
-}
+//记负均正
+//#include <stdio.h>
+//
+//int main() {
+//	int n;
+//	while (scanf("%d", &n) != EOF) {
+//		int count1 = 0, count2 = 0, tmp;
+//		int s = 0, S = 0;
+//		for (int i = 0; i < n; i++)
+//		{
+//			scanf("%d", &tmp);
+//			if (tmp > 0)
+//			{
+//				count2++;
+//				s += tmp;
+//			}
+//			else if (tmp < 0)
+//			{
+//				count1++;
+//			}
+//		}
+//		if (count2 == 0)
+//		{
+//			S = 0;
+//		}
+//		else
+//		{
+//			S = s / count2;
+//		}
+//		printf("%d %0.1f", count1, S);
+//	}
+//	return 0;
+//}
+//尼科彻斯定理
+//#include <stdio.h>
+//
+//int main() {
+//	int n;
+//	while (scanf("%d", &n) != EOF) {
+//		int arr[1000] = { 0 };
+//		int a = n * (n - 1) + 1;
+//		sprintf(arr, "%d", a);
+//		for (int i = 1; i < n; i++)
+//		{
+//			sprintf(arr, "%s+%d", arr, a += 2);
+//		}
+//		printf("%s", arr);
+//	}
+//	return 0;
+//}
+///**打印从1到最大的n位数
+// * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
+// *
+// *
+// * @param n int整型 最大位数
+// * @return int整型一维数组
+// * @return int* returnSize 返回数组行数
+// */
+//int* printNumbers(int n, int* returnSize) {
+//	*returnSize = pow(10, n) - 1;
+//	int* arr = (int*)malloc(sizeof(int) * (*returnSize));
+//	for (int i = 0; i < *returnSize; i++)
+//	{
+//		arr[i] = i + 1;
+//	}
+//	return arr;
+//}
+//#include<stdio.h>
+//#include<stdlib.h>
+//
+//#define _CRT_SECURE_NO_WARNINGS
+//#include<stdio.h>
+//#include<string.h>
+//
+//
+//#include<stdio.h>
+//#include<stdlib.h>
+//
+//#define _CRT_SECURE_NO_WARNINGS
+//#include<stdio.h>
+//#include<string.h>
+//
+//
+//#include<stdio.h>
+//#include<stdlib.h>
+//
+//int main()
+//{
+//	char a[] = { "test.txt" };
+//	char b[] = { "b.txt" };
+//	char ch;
+//	FILE* q, * w;
+//	q = fopen(a, "r");
+//	w = fopen(b, "w");
+//	while ((ch = fgetc(q))!= EOF)
+//	{
+//		if (ch != 0)
+//			fputc(ch, w);
+//	}
+//	fclose(q);
+//	fclose(w);
+//	return 0;
+//}
 
 
 
