@@ -3,6 +3,19 @@
 #include<string.h>
 
 
+//int minNumberInRotateArray(int* rotateArray, int rotateArrayLen) {
+//	if (rotateArrayLen == 0) return 0;
+//	int left = 0, right = rotateArrayLen - 1, mid;
+//	if (rotateArray[right] > rotateArray[left]) return rotateArray[0];
+//	while (left < right) {
+//		mid = left + (right - left) / 2;
+//		if (rotateArray[mid] > rotateArray[right]) left = mid + 1;
+//		else if (rotateArray[mid] == rotateArray[right]) right--;
+//		else right = mid;
+//	}
+//		return rotateArray[left];
+//}
+
 //记负均正
 //#include <stdio.h>
 //
