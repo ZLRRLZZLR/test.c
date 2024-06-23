@@ -2,7 +2,79 @@
 #include<stdio.h>
 #include<string.h>
 
-
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include <time.h>
+//
+//#define MAZE_WIDTH 40
+//#define MAZE_HEIGHT 40
+//
+//typedef struct {
+//	int width;
+//	int height;
+//	char** cells;
+//} Maze;
+//
+//Maze initialize_maze(int width, int height) {
+//	Maze maze;
+//	maze.width = width;
+//	maze.height = height;
+//	maze.cells = (char**)malloc(height * sizeof(char*));
+//	for (int i = 0; i < height; i++) {
+//		maze.cells[i] = (char*)malloc(width * sizeof(char));
+//		for (int j = 0; j < width; j++) {
+//			maze.cells[i][j] = '~';
+//		}
+//	}
+//	return maze;
+//}
+//
+//void set_start_and_end(Maze* maze) {
+//	maze->cells[0][0] = 'S';
+//	maze->cells[maze->height - 1][maze->width - 1] = 'E';
+//}
+//
+//void place_obstacles_and_treasures(Maze* maze, int obstacle_count, int treasure_count) {
+//	srand(time(NULL));
+//
+//	int placed_obstacles = 0;
+//	while (placed_obstacles < obstacle_count) {
+//		int tx = rand() % maze->width;
+//		int ty = rand() % maze->height;
+//		if (maze->cells[ty][tx] == '~' && (tx != 0 || ty != 0) && (tx != maze->width - 1 || ty != maze->height - 1)) {
+//			maze->cells[ty][tx] = '#';
+//			placed_obstacles++;
+//		}
+//	}
+//
+//	int placed_treasures = 0;
+//	while (placed_treasures < treasure_count) {
+//		int tx = rand() % maze->width;
+//		int ty = rand() % maze->height;
+//		if (maze->cells[ty][tx] == '~' && (tx != 0 || ty != 0) && (tx != maze->width - 1 || ty != maze->height - 1)) {
+//			maze->cells[ty][tx] = 'C';
+//			placed_treasures++;
+//		}
+//	}
+//}
+//
+//void print_maze(Maze maze) {
+//	for (int i = 0; i < maze.height; i++) {
+//		for (int j = 0; j < maze.width; j++) {
+//			printf("%c", maze.cells[i][j]);
+//		}
+//		printf("\n");
+//	}
+//}
+//
+//int main() {
+//	Maze maze = initialize_maze(MAZE_WIDTH, MAZE_HEIGHT);
+//	set_start_and_end(&maze);
+//	place_obstacles_and_treasures(&maze, 140, 12);
+//	print_maze(maze);
+//
+//	return 0;
+//}
 //int minNumberInRotateArray(int* rotateArray, int rotateArrayLen) {
 //	if (rotateArrayLen == 0) return 0;
 //	int left = 0, right = rotateArrayLen - 1, mid;
