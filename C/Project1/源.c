@@ -2,6 +2,60 @@
 #include<stdio.h>
 #include<string.h>
 
+
+
+///**错误的集合
+// * Note: The returned array must be malloced, assume caller calls free().
+// */
+//int* findErrorNums(int* nums, int numsSize, int* returnSize) {
+//	int* arr = (int*)calloc(numsSize, sizeof(int));
+//	*returnSize = 2;
+//	int* a = (int*)malloc(sizeof(int) * 2);
+//	for (int i = 0; i < numsSize; i++)
+//	{
+//		arr[nums[i] - 1]++;
+//	}
+//	for (int i = 0; i < numsSize; i++)
+//	{
+//		if (arr[i] == 2)
+//		{
+//			a[0] = i + 1;
+//		}
+//		if (arr[i] == 0)
+//		{
+//			a[1] = i + 1;
+//		}
+//	}
+//	return a;
+//}
+///**旋转数组
+// * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
+// *
+// *
+// * @param nums int整型一维数组
+// * @param numsLen int nums数组长度
+// * @return int整型
+// */
+//int minNumberInRotateArray(int* nums, int numsLen) {
+//	int left = 0;
+//	int right = numsLen - 1;
+//
+//	while (left < right) {
+//		int mid = left + (right - left) / 2;
+//
+//		if (nums[mid] > nums[right]) {
+//			left = mid + 1;
+//		}
+//		else if (nums[mid] < nums[right]) {
+//			right = mid;
+//		}
+//		else {
+//			right--;
+//		}
+//	}
+//
+//	return nums[left];
+//}
 //#include <stdio.h>
 //#include <stdlib.h>
 //#include <time.h>
