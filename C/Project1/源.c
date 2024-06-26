@@ -2,7 +2,89 @@
 #include<stdio.h>
 #include<string.h>
 
-
+///**数据在升序数组中出现的顺序
+// * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
+// *
+// *
+// * @param nums int整型一维数组
+// * @param numsLen int nums数组长度
+// * @param k int整型
+// * @return int整型
+// */
+//int GetNumberOfK(int* nums, int numsLen, int k) {
+//	int* arr = (int*)calloc(101, sizeof(int));
+//	for (int i = 0; i < numsLen; i++)
+//	{
+//		arr[nums[i]]++;
+//	}
+//
+//	return arr[k];
+//}
+///**
+// * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
+// *
+// *
+// * @param nums int整型一维数组
+// * @param numsLen int nums数组长度
+// * @param k int整型
+// * @return int整型
+// */
+//int findpose(int* nums, int len, int k, int flge)
+//{
+//	int left = 0;
+//	int right = len - 1;
+//	int mid;
+//	while (left <= right)
+//	{
+//		mid = (left + right) / 2;
+//		if (nums[mid] < k)
+//		{
+//			left = mid + 1;
+//		}
+//		else if (nums[mid] > k)
+//		{
+//			right = mid - 1;
+//		}
+//		else
+//		{
+//			if (flge == 0)
+//			{
+//				if (mid == left || nums[mid - 1] != k)
+//				{
+//					return mid;
+//				}
+//				else
+//				{
+//					right = mid - 1;
+//				}
+//			}
+//			else
+//			{
+//				if (mid == right || nums[mid + 1] != k)
+//				{
+//					return mid;
+//				}
+//				else
+//				{
+//					left = mid + 1;
+//				}
+//			}
+//		}
+//
+//	}
+//	return -1;
+//}
+//
+//int GetNumberOfK(int* nums, int numsLen, int k) {
+//	if (numsLen == 0)
+//		return 0;
+//	int left = findpose(nums, numsLen, k, 0);
+//	int right = findpose(nums, numsLen, k, 1);
+//	if (left == -1 && right == -1)
+//		return 0;
+//
+//	return right - left + 1;
+//}
 
 ///**错误的集合
 // * Note: The returned array must be malloced, assume caller calls free().
