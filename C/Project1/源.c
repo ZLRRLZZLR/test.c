@@ -2,6 +2,36 @@
 #include<stdio.h>
 #include<string.h>
 
+
+
+
+
+//整数转换
+//int convertInteger(int A, int B) {
+//	unsigned int num = A ^ B;
+//	int count = 0;
+//	while (num)
+//	{
+//
+//		num = num & (num - 1);
+//		count++;
+//	}
+//
+//	return count;
+//}
+//
+//int convertInteger(int A, int B) {
+//	int num = A ^ B;
+//	int count = 0;
+//	for (int i = 0; i < 32; i++)
+//	{
+//		if ((num >> i) & 1)
+//		{
+//			count++;
+//		}
+//	}
+//	return count;
+//}
 ///**数据在升序数组中出现的顺序
 // * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
 // *
