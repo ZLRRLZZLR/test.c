@@ -1,10 +1,402 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 #include<string.h>
+#include<stdlib.h>
 
-
-
-
+//数列的和
+//#include <math.h>
+//#include <stdio.h>
+//
+//int main()
+//{
+//	int n, m;
+//	while (scanf("%d %d", &n, &m) != EOF)
+//	{
+//		double sum1 = n;
+//		double S = 0;
+//		for (int i = m - 1; i >= 0; i--)
+//		{
+//			S += sum1;
+//			sum1 = sqrt(sum1);
+//		}
+//		printf("%0.2lf\n", S);
+//
+//	}
+//	return 0;
+//}
+//#include <stdio.h>
+//
+//int main() {
+//	char str[100001] = { 0 };
+//	int row = 0;
+//	while (gets(str) > 0) {
+//		char* pstr = str;
+//		char* word[10000] = { NULL };
+//		while (*pstr != '\0')
+//		{
+//			if (isalpha(*pstr))
+//			{
+//				word[row++] = pstr;
+//				while (isalpha(*pstr))
+//				{
+//					pstr++;
+//				}
+//				*pstr = '\0';
+//				pstr++;
+//			}
+//			else {
+//				pstr++;
+//			}
+//		}
+//		for (int i = row - 1; i >= 0; i--)
+//		{
+//			printf("%s ", word[i]);
+//		}
+//	}
+//
+//	return 0;
+//}
+//#include <stdio.h>
+//int main()
+//{
+//	int n;
+//	while (~scanf("%d", &n)) {
+//		int num1 = 1, num2 = 1, ret = 0;
+//		for (int i = 2; i < n; i++) {
+//			ret = num1 + num2;
+//			num1 = num2;
+//			num2 = ret;
+//		}
+//		printf("%d\n", ret);
+//	}
+//	return 0;
+//}
+//数字颠倒
+//#include <stdio.h>
+//int main()
+//{
+//	int num;
+//	while (~scanf("%d", &num)) {
+//		if (num == 0) {//0的情况特殊处理，因为0不会进入while循环计算余数，因此不会被打印
+//			printf("%d", num % 10);
+//			continue;
+//		}
+//		while (num > 0) {
+//			printf("%d", num % 10);//打印一个数字的个位数 129 % 10 得到9
+//			num /= 10;//通过除以10的方式去掉个位数 例如：129/10 得到12
+//		}
+//		printf("\n");
+//	}
+//	return 0;
+//}
+//int main()
+//{
+//	char arr[4] = {"123"};
+//	printf("%s",arr);
+//	return 0;
+//}
+//最大连续 1 的个数
+//int findMaxConsecutiveOnes(int* nums, int numsSize) {
+//	int max = 0;
+//	int num = 0;
+//	for (int i = 0; i < numsSize; i++)
+//	{
+//		if (nums[i] == 1)
+//		{
+//			num++;
+//		}
+//		else
+//		{
+//			if (num > max)
+//			{
+//				max = num;
+//			}
+//			num = 0;
+//		}
+//	}
+//	if (num > max)
+//	{
+//		max = num;
+//	}
+//	return max;
+//}
+//int findMaxConsecutiveOnes(int* nums, int numsSize) {
+//	int max = 0;
+//	int num = 0;
+//	for (int i = 0; i < numsSize; i++)
+//	{
+//		if (nums[i] == 1)
+//		{
+//			num++;
+//		}
+//		else
+//		{
+//			if (num > max)
+//			{
+//				max = num;
+//			}
+//			num = 0;
+//		}
+//	}
+//	return max;
+//}
+//
+//int main()
+//{
+//	int nums[] = {1, 1, 0, 1, 1, 1};
+//	findMaxConsecutiveOnes(nums,6);
+//
+//	return 0;
+//}
+//**找到所有数组中消失的数字
+// * Note: The returned array must be malloced, assume caller calls free().
+// */
+//	int* findDisappearedNumbers(int* nums, int numsSize, int* returnSize) {
+//	int* arr = (int*)calloc(numsSize, sizeof(int));
+//	*returnSize = 0;
+//	for (int i = 0; i < numsSize; i++)
+//	{
+//		arr[nums[i] - 1]++;
+//	}
+//	for (int i = 0; i < numsSize; i++)
+//	{
+//		if (arr[i] == 0)
+//		{
+//			nums[(*returnSize)++] = i + 1;
+//		}
+//	}
+//	return nums;
+//}
+///**不用加减乘除做加法
+// * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
+// *
+// *
+// * @param num1 int整型
+// * @param num2 int整型
+// * @return int整型
+// */
+//int Add(int num1, int num2)
+//{
+//	while (num2 != 0)
+//	{
+//		int tmp = num1 ^ num2;
+//		num2 = (num1 & num2) << 1;
+//		num1 = tmp;
+//	}
+//	return num1;
+//}
+//先计算不考虑进位的相加结果，使用异或操作可以取得，即相同位上的数字进行异或运算（0^0=0，0^1=1，1^0=1，1^1=0）。
+//然后计算进位结果，通过相与操作后左移一位取得，即相同位上的数字进行与运算（1&1=1，其他情况为0），再将结果左移一位。//
+//将上一步得到的进位结果与不考虑进位的相加结果再次进行上述两步操作，直到进位为0，计算结束
+//int fun(unsigned int x)
+//{
+//	int n = 0;
+//	while (x + 1)
+//	{
+//		n++;
+//		x = x | (x + 1);
+//	}
+//		return n;
+//}
+//int main()
+//{
+//	printf("%d",fun(2014));
+//}
+//int main()
+//{
+//	char c = '9';
+//	if ('A' <= c <= 'Z') printf("YES");
+//	else printf("NO");
+//	return 0;
+//}
+///**除自身以外数组的乘积
+// * Note: The returned array must be malloced, assume caller calls free().
+// */
+//int* productExceptSelf(int* nums, int numsSize, int* returnSize) {
+//	int* arr = (int*)malloc(sizeof(int) * numsSize);
+//	*returnSize = numsSize;
+//	int left = 1, right = 1;
+//	for (int i = 0; i < numsSize; i++)
+//	{
+//		arr[i] = left;
+//		left *= nums[i];
+//	}
+//	for (int i = numsSize - 1; i >= 0; i--)
+//	{
+//		arr[i] *= right;
+//		right *= nums[i];
+//	}
+//	return arr;
+//}
+///**自除数
+// * Note: The returned array must be malloced, assume caller calls free().
+// */
+//int* selfDividingNumbers(int left, int right, int* returnSize) {
+//	int* arr = (int*)malloc(sizeof(int) * 1000);
+//	*returnSize = 0;
+//	for (int i = left; i <= right; i++)
+//	{
+//		int num = i;
+//		while (num)
+//		{
+//			int renum = num % 10;
+//			if (renum == 0 || i % renum != 0)
+//			{
+//				break;
+//			}
+//			num /= 10;
+//		}
+//		if (num == 0)
+//		{
+//			arr[(*returnSize)++] = i;
+//		}
+//	}
+//	return arr;
+//}
+//多数元素
+//int majorityElement(int* nums, int numsSize) {
+//	int count = 1;
+//	int temp = nums[0];
+//	for (int i = 1; i < numsSize; i++)
+//	{
+//		if (temp == nums[i])
+//		{
+//			count++;
+//		}
+//		else
+//		{
+//			count--;
+//			if (count == 0)
+//			{
+//				temp = nums[i + 1];
+//			}
+//		}
+//	}
+//
+//	return temp;
+//}
+//寻找数组的中心下标
+// int pivotIndex(int* nums, int numsSize) {
+//for (int i = 0; i < numsSize; i++)
+//{
+//	int sum1 = 0, sum2 = 0;
+//	for (int j = 0; j < numsSize; j++)
+//	{
+//		if (j < i)
+//		{
+//			sum1 += nums[j];
+//		}
+//		if (j > i)
+//		{
+//			sum2 += nums[j];
+//		}
+//	}
+//	if (sum1 == sum2)
+//	{
+//		return i;
+//	}
+//}
+//return -1;
+//}
+//int pivotIndex(int* nums, int numsSize) {
+//	int sum1 = 0;
+//	int sum2 = 0;
+//	int sum3 = 0;
+//
+//	for (int i = 0; i < numsSize; i++)
+//	{
+//		sum1 += nums[i];
+//	}
+//	sum3 = sum1;
+//	for (int i = 0; i < numsSize; i++)
+//	{
+//		sum3 -= nums[i];
+//		if (sum3 == sum2)
+//		{
+//			return i;
+//		}
+//		sum2 += nums[i];
+//	}
+//	return -1;
+//}
+///**两个数组的交际
+// * Note: The returned array must be malloced, assume caller calls free().
+// */
+//int* intersection(int* nums1, int nums1Size, int* nums2, int nums2Size, int* returnSize) {
+//	int i, j, k;
+//	int* arr = (int*)malloc(sizeof(int) * 1000);
+//	*returnSize = 0;
+//	for (i = 0; i < nums1Size; i++)
+//	{
+//		for (j = 0; j < nums2Size; j++)
+//		{
+//
+//			if (nums1[i] == nums2[j])
+//			{
+//				break;
+//			}
+//		}
+//		if (j == nums2Size)
+//		{
+//			continue;
+//		}
+//		for (k = 0; k < *returnSize; k++)
+//		{
+//			if (nums1[i] == arr[k])
+//				break;
+//		}
+//		if (k == *returnSize)
+//		{
+//			arr[k] = nums1[i];
+//			(*returnSize)++;
+//		}
+//	}
+//
+//	return arr;
+//}
+//
+//int main()
+//{
+//	int nums1[4] = { 1,2,2,1 };
+//	int nums2[2] = { 2,2 };
+//	int returnSize[1] = { 0 };
+//	intersection(nums1, 4, nums2, 2, returnSize);
+//	return 0;
+//}
+//至少是其他数字两倍的最大数
+//int dominantIndex(int* nums, int numsSize) {
+//	int max, small, subs;
+//	if (nums[0] > nums[1])
+//	{
+//		max = nums[0];
+//		small = nums[1];
+//		subs = 0;
+//	}
+//	else
+//	{
+//		max = nums[1];
+//		small = nums[0];
+//		subs = 1;
+//	}
+//	for (int i = 2; i < numsSize; i++)
+//	{
+//		if (nums[i] > max)
+//		{
+//			small = max;
+//			max = nums[i];
+//			subs = i;
+//		}
+//		else if (nums[i] > small)
+//		{
+//			small = nums[i];
+//		}
+//	}
+//	if (max >= small * 2)
+//	{
+//		return subs;
+//	}
+//	return -1;
+//}
 
 //整数转换
 //int convertInteger(int A, int B) {
