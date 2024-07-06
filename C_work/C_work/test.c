@@ -5,8 +5,43 @@
 
 
 
-
-
+//#include <stdio.h>
+//
+//int main() {
+//    double a;
+//    while (scanf("%lf", &a) != EOF) { // 注意 while 处理多个 case
+//        // 64 位输出请用 printf("%lld") to 
+//        printf("%0.3lf\n", a);
+//    }
+//    return 0;
+//}
+//#include <stdio.h>
+//
+//int main() {
+//    int a;
+//    while (scanf("%d", &a) != EOF) { // 注意 while 处理多个 case
+//        // 64 位输出请用 printf("%lld") to 
+//        printf("%d\n", a);
+//    }
+//    return 0;
+//}
+//#include <stdio.h>
+//
+//int main() {
+//    puts("     **     ");
+//    puts("     **     ");
+//    puts("************");
+//    puts("************");
+//    puts("    *  *    ");
+//    puts("    *  *    ");
+//    return 0;
+//}
+//#include <stdio.h>
+//
+//int main() {
+//    puts("Hello Nowcoder!");
+//    return 0;
+//}
 ///**NC107 寻找峰值
 // * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
 // *
