@@ -4,7 +4,26 @@
 #include<stdlib.h>
 
 
-
+//#include <stdio.h>
+//
+//int main() {
+//    int a, b, c;
+//    while (scanf("%d %d %d", &a, &b, &c) != EOF) { // 注意 while 处理多个 case
+//        // 64 位输出请用 printf("%lld") to 
+//        printf("%d\n", b);
+//    }
+//    return 0;
+//}
+//#include <stdio.h>
+//
+//int main() {
+//    char a;
+//    while (scanf("%c", &a) != EOF) { // 注意 while 处理多个 case
+//        // 64 位输出请用 printf("%lld") to 
+//        printf("%c\n", a);
+//    }
+//    return 0;
+//}
 //#include <stdio.h>
 //
 //int main() {
