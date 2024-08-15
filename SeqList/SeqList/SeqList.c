@@ -9,6 +9,7 @@ void SLInit(SL* ps)
 	ps->size = ps->capacity = 0;
 
 }
+
 //Ïú»Ù
 void SLDestroy(SL* ps)
 {

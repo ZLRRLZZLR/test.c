@@ -133,7 +133,7 @@ LTNode* LTFind(LTNode* phead, LTDataType x)
 	return NULL;
 }
 
-//在pos位置之后插入数据
+//在指定位置之后插入数据
 void LTInsert(LTNode* pos, LTDataType x)
 {
 	assert(pos);
