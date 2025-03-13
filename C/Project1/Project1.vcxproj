@@ -27,6 +27,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="b.txt" />
+    <Text Include="bite.txt" />
     <Text Include="test.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

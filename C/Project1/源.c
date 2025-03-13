@@ -2,6 +2,32 @@
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
+                                                               
+#include<stdio.h>
+
+int main() {
+
+	FILE* myfile = fopen("bite", "w+");
+	char s[] = { "linux so easy!" };
+	fwrite(s, sizeof(char), sizeof(s) - 1, myfile);
+
+	fseek(myfile, 0, SEEK_SET);
+
+	//fwrite(s,1,sizeof(s) - 1,myfile);
+	char ret[1000] = {0};
+	fread(ret, sizeof(char), sizeof(s) - 1, myfile);
+
+	ret[sizeof(s) - 1] = '\0';
+
+	printf("%s\n", ret);
+	//printf("%d",1);
+
+	fclose(myfile);
+
+	return 0;
+}
+
+
 
 //数列的和
 //#include <math.h>

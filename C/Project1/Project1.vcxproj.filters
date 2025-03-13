@@ -34,5 +34,8 @@
     <Text Include="b.txt">
       <Filter>源文件</Filter>
     </Text>
+    <Text Include="bite.txt">
+      <Filter>源文件</Filter>
+    </Text>
   </ItemGroup>
 </Project>
